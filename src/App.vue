@@ -1,26 +1,16 @@
 <template>
   <div id="app">
     <router-view/>
-    <div class="tab border-1px">
-      <div class="tab-item">
-        <router-link to="/home">首页</router-link>
-      </div>
-      <div class="tab-item">
-        <router-link to="/classify">分类</router-link>
-      </div>
-      <div class="tab-item">
-        <router-link to="/mystudy">我的学习</router-link>
-      </div>
-      <div class="tab-item">
-        <router-link to="/account">账号</router-link>
-      </div>
-    </div>
+    <tabbar/>
   </div>
 </template>
 
 <script>
+import tabbar from "@/components/tabbar"
 export default {
-  name: 'App'
+  components:{
+    tabbar,
+  }
 }
 </script>
 

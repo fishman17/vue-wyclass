@@ -12,6 +12,7 @@ import Coursedetails from '@/components/Coursedetails/Coursedetails'
 import introduce from '@/components/Coursedetails/introduce'
 import catalog from '@/components/Coursedetails/catalog'
 import comment from '@/components/Coursedetails/comment'
+import NotFound from '@/components/NotFound'
 Vue.use(Router)
 
 export default new Router({
@@ -64,6 +65,10 @@ export default new Router({
         { path: 'comment', component:comment, name: 'comment' },
       ]
     },
-
+    {
+      path: '*',
+      name: 'notfound',
+      component: NotFound
+    }
   ]
 })
