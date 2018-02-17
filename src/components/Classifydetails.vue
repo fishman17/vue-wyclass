@@ -2,12 +2,11 @@
 <div>
   <div>回跳选项和标题 ， 查找</div>
   <ul>
-    <li v-for="item in classdetail" :key="item.index">
-        {{item[key]}}
+    <li v-for="item in classdetail" :key="item.id">
+        {{item}}
     </li>
   </ul>
   <router-view></router-view>
-
 </div>
 </template>
 

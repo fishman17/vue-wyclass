@@ -12,7 +12,7 @@ import Coursedetails from '@/components/Coursedetails/Coursedetails'
 import introduce from '@/components/Coursedetails/introduce'
 import catalog from '@/components/Coursedetails/catalog'
 import comment from '@/components/Coursedetails/comment'
-import Classifydetails from '@/components/Coursedetails/Classifydetails' 
+import Classifydetails from '@/components/Classifydetails' 
 import NotFound from '@/components/NotFound'
 Vue.use(Router)
 
@@ -67,13 +67,10 @@ export default new Router({
       ]
     },
     {
-      path: '/Classifydetails',
+      path: '/classifydetails',
       name: 'Classifydetails',
       component: Classifydetails,
       children:[
-        {
-          
-        },
       ]
     },
     {
