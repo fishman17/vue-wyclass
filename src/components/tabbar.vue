@@ -10,7 +10,7 @@
       <router-link to="/mystudy">我的学习</router-link>
     </div>
     <div class="tab-item">
-      <router-link to="/account">账号1</router-link>
+      <router-link to="/account">账号</router-link>
     </div>
   </div>
 </template>
