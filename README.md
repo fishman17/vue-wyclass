@@ -1,7 +1,12 @@
 # vue-wyclass
 
 > vue仿网易云课堂app
-使用  vue-router vuex webpack stylus axios
+使用  vue-router vuex webpack stylus axios mint-ui
+难点 底部tabbar 上部内容滚动高度的设定
+2.18
+mint-ui + font-icon
+slot的使用
+遗留bug 定位库组件css失败  vertical-align: inherit 
 ## Build Setup
 
 ``` bash
