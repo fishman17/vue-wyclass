@@ -8,6 +8,7 @@ mint-ui + font-icon
 slot的使用
 历史遗留bug Acount页面 定位库组件css失败  vertical-align: inherit 
 vue操作dom
+:class="a?'b':'c'"
 ## Build Setup
 
 ``` bash

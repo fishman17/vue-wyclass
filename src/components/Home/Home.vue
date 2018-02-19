@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <serch class="serch"></serch>
+    <search :isSearching="false" @click.native="changeToSearch"></search>
     <div class="tab">
       <!-- <div class="tab-item">
         <router-link to="recommend">个性推荐</router-link>
@@ -14,12 +14,12 @@
       <div class="tab-item">
         <router-link to="expert">行家</router-link>
       </div> -->
-    <mt-navbar v-model="selected">
-      <mt-tab-item id="1">个性推荐</mt-tab-item>
-      <mt-tab-item id="2">精品课</mt-tab-item>
-      <mt-tab-item id="3">微专业</mt-tab-item>
-      <mt-tab-item id="4">行家</mt-tab-item>
-    </mt-navbar>
+      <mt-navbar v-model="selected">
+        <mt-tab-item id="1">个性推荐</mt-tab-item>
+        <mt-tab-item id="2">精品课</mt-tab-item>
+        <mt-tab-item id="3">微专业</mt-tab-item>
+        <mt-tab-item id="4">行家</mt-tab-item>
+      </mt-navbar>
     </div>
     <mt-tab-container v-model="selected">
       <mt-tab-container-item id="1">
@@ -39,18 +39,18 @@
 </template>
 
 <script>
-import serch from "@/components/serch";
 import classic from "@/components/Home/classic";
 import expert from "@/components/Home/expert";
 import major from "@/components/Home/major";
 import recommend from "@/components/Home/recommend";
+import search from "@/components/search";
 export default {
   components: {
-    serch,
     classic,
     expert,
     major,
     recommend,
+    search
   },
   data(){
     return{
@@ -58,12 +58,19 @@ export default {
     }
   },
   mounted(){
+  },
+  methods:{
+    changeToSearch(){
+      this.$router.push({path:'home/search'});
+    }
   }
 };
 </script>
 
 <style lang="stylus" scoped>
 .wrapper
+  .mint-search
+      height initial
     // position relative
     // .serch
     //   position absolute

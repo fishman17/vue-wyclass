@@ -13,6 +13,7 @@ import introduce from '@/components/Coursedetails/introduce'
 import catalog from '@/components/Coursedetails/catalog'
 import comment from '@/components/Coursedetails/comment'
 import Classifydetails from '@/components/Classifydetails' 
+import search from '@/components/search' 
 import NotFound from '@/components/NotFound'
 Vue.use(Router)
 
@@ -72,6 +73,11 @@ export default new Router({
       component: Classifydetails,
       children:[
       ]
+    },
+    {
+      path: '/home/search',
+      name: 'search',
+      component: search,
     },
     {
       path: '*',

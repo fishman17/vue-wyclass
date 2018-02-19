@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="user">
+    <div class="user" v-if="user.username">
       <img :src="user.src" alt="" class="avatar"/>
       <div class="description">
         <p class="title">{{user.username}}</p>
@@ -43,7 +43,8 @@ export default {
           {id:18001,progress:5},
           {id:18003,progress:0},
           {id:18005,progress:34},
-          {id:18006,progress:100}],
+          {id:18006,progress:100}
+          ],
       },
       classList : [],
       allClass : [
@@ -161,6 +162,7 @@ export default {
       margin-top 1rem
       padding 0
       .class
+        display block 
         height 6.66667rem
         border-bottom 1px solid black
         .class-description
@@ -169,7 +171,7 @@ export default {
           .title
             display block 
             height 2rem
-            margin-top 0
+            margin-top 0.5rem
             font-size 1.2rem;
           .progress
             display block 
@@ -177,6 +179,7 @@ export default {
             font-size 0.8666rem;
             color green
         .class-img
+          float right 
           display inline-block
           width 7rem
           margin-top 1rem
