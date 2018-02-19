@@ -69,6 +69,11 @@
             <i slot="icon" class="icon iconfont icon-haoping" ></i> 
          </mt-cell>
       </li>
+      <li class="nav-item">
+         <mt-cell title="给我们建议"   is-link>
+            <i slot="icon" class="icon iconfont icon-haoping" ></i> 
+         </mt-cell>
+      </li>
     </ul>
   
   </div>
@@ -91,7 +96,9 @@ export default {
 <style lang="stylus" scoped>
 .wrapper
   background-color  #d9d9d9
-  height 38rem
+  width 100%
+  height 92%
+  position fixed
   overflow scroll
   .user
     background-color white
@@ -123,13 +130,15 @@ export default {
         background-position initial 
         .mint-cell-wrapper
           .mint-cell-title
+            color red
             .icon 
-              vertical-align: inherit 
-              font-size 20px
+              vertical-align: text-top 
+              font-size 23px
               color #707070
-            // .mint-cell-wrapper
-            //   .mint-cell-title
             .mint-cell-text
-              vertical-align: inherit 
+              color red
+              display block
+              vertical-align: text-top 
               font-size 100px
+
 </style>

@@ -14,46 +14,51 @@
       <div class="tab-item">
         <router-link to="expert">行家</router-link>
       </div> -->
-    <!-- <mt-navbar>
-      <mt-tab-item id="1"><router-link to="recommend">个性推荐</router-link></mt-tab-item>
-      <mt-tab-item id="2"><router-link to="classic">精品课</router-link></mt-tab-item>
-      <mt-tab-item id="3"><router-link to="major">微专业</router-link></mt-tab-item>
-      <mt-tab-item id="4"><router-link to="expert">行家</router-link></mt-tab-item>
-    </mt-navbar> -->
-      <mt-tab-container v-model="active">
-        <mt-tab-container-item id="tab-container1">
-          <classic/>
-        </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container2">
-          <expert/>
-        </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container3">
-          <major/>
-        </mt-tab-container-item>
-      </mt-tab-container>
+    <mt-navbar v-model="selected">
+      <mt-tab-item id="1">个性推荐</mt-tab-item>
+      <mt-tab-item id="2">精品课</mt-tab-item>
+      <mt-tab-item id="3">微专业</mt-tab-item>
+      <mt-tab-item id="4">行家</mt-tab-item>
+    </mt-navbar>
     </div>
-    <!-- <router-view class="router"></router-view> -->
+    <mt-tab-container v-model="selected">
+      <mt-tab-container-item id="1">
+        <recommend/>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="2">
+        <classic/>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="3">
+        <expert/>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="4">
+        <major/>
+      </mt-tab-container-item>
+    </mt-tab-container>
   </div>
 </template>
 
 <script>
 import serch from "@/components/serch";
-import classic from "@/components/home/classic";
-import expert from "@/components/home/expert";
-import major from "@/components/home/major";
-
+import classic from "@/components/Home/classic";
+import expert from "@/components/Home/expert";
+import major from "@/components/Home/major";
+import recommend from "@/components/Home/recommend";
 export default {
   components: {
     serch,
     classic,
     expert,
     major,
+    recommend,
   },
   data(){
     return{
-      active: 1,
+      selected: "1",
     }
   },
+  mounted(){
+  }
 };
 </script>
 

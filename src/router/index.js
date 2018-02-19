@@ -26,16 +26,16 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home,
-      children:[
-        {
-          path: '',
-          redirect: 'recommend'
-        },
-        { path: 'recommend', component: recommend, name: 'recommend' },
-        { path: 'classic', component: classic, name: 'classic' },
-        { path: 'major', component: major, name: 'major' },
-        { path: 'expert', component: expert, name: 'expert' },
-      ]
+      // children:[
+      //   {
+      //     path: '',
+      //     redirect: 'recommend'
+      //   },
+      //   { path: 'recommend', component: recommend, name: 'recommend' },
+      //   { path: 'classic', component: classic, name: 'classic' },
+      //   { path: 'major', component: major, name: 'major' },
+      //   { path: 'expert', component: expert, name: 'expert' },
+      // ]
     },
     {
       path: '/account',
