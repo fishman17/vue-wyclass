@@ -54,7 +54,7 @@ export default {
         {id:18004,title:'跟郝敏老师学声乐唱歌技巧',imgSrc:"http://img-ph-mirror.nosdn.127.net/9qAwvh_VGX8h0W3x-VmGRA==/6597390824054084846.jpg?imageView&thumbnail=223y124&quality=100"},
         {id:18005,title:'Git实用教程',imgSrc:"http://img-ph-mirror.nosdn.127.net/8ObC7AzOsOVAR8ph-6-MJw==/6631564744955406715.png?imageView&thumbnail=223y124&quality=100"},
         {id:18006,title:'高效阅读：如何投资你的碎片化时间',imgSrc:"http://edu-image.nosdn.127.net/8F0FC44AFD2BB8874A3150254198FC91.png?imageView&thumbnail=450y250&quality=100"},
-      
+    
       ],
     }
   },
@@ -62,7 +62,6 @@ export default {
     this.user.nowLearnClass.map((item)=>{
       this.checkList(item);
       });
-    console.log(this.classList);
   },
   methods:{
     checkList(item){    //通过user中的所学课程id从所有课程中寻找详细课程信息
@@ -74,7 +73,6 @@ export default {
       }
     },
     changeToDetail(classes){
-      console.log(classes);
     }
   }
 }
@@ -90,67 +88,66 @@ export default {
   .user
     // height 7rem
     background-color: white;
-    border-bottom: 0.1rem solid #ced1da;
-    padding: 1rem;
+    border-bottom: .042667rem solid #ced1da;
+    padding: .42667rem;
     .nav 
       margin-top: 8px;
       margin-bottom: 0;
     .avatar 
-      width: 4rem;
-      height: 4rem;
-      border-radius: 4rem;
-      border: 0.3333rem solid #ced1da;
+      width: 1.70667rem;
+      height: 1.70667rem;
+      border-radius: 1.70667rem;
+      border: 0.14222rem solid #ced1da;
       display: inline-block;
-      margin-left: 0.5rem;
-      margin-top: 0.5rem;
+      margin-left: .21333rem;
+      margin-top: 0.21333rem;
     .description 
       display: inline-block;
       vertical-align: top;
-      margin-left: 0.5rem;
+      margin-left: 0.21333rem;
       .title 
-        font-size: 1.5rem;
+        font-size: .64rem;
         font-weight: 600;
-        margin-top: 1rem;
+        margin-top: .42667rem;
         margin-bottom: 0;
       .target 
         display: inline-block;
-        margin-top: 0.5rem;
-        font-size: 0.8rem;
+        margin-top: 0.21333rem;
+        font-size: 0.34133rem;
     .manage 
       display: flex;
       &>span 
-        margin-top: 1rem;
+        margin-top: 0.21333rem;
         flex: 1;
         text-align: center;
-        border-right: 0.1rem solid #ced1da;
+        border-right: 1px solid #ced1da;
         &:last-child 
           border-right: 0;
   .nowlearn 
-    margin-top: 1rem;
-    padding: 1rem;
+    margin-top: .21333rem;
+    padding: .41333rem;
     min-height: 100%;
     background-color: white;
 
     .head 
       .title 
         // display inline-block
-        font-weight: bold;
-      
-
+        font-weight: 500
+        font-size 0.512rem;
       .seeall 
         position: relative;
         float: right;
-        font-size: 0.8rem;
-        margin-right: 1.3333rem;
-        margin-top: 0.3333rem;
-
+        font-size: 0.37133rem;
+        margin-right: 0.56889rem;
+        margin-top: 0.14222rem;
+        color #c8c8cd;
         &:after 
           border: solid 2px #c8c8cd;
           border-bottom-width: 0;
           border-left-width: 0;
           content: ' ';
           top: 55%;
-          right: -1rem;
+          right: -0.42667rem;
           position: absolute;
           width: 7px;
           height: 7px;
@@ -159,29 +156,30 @@ export default {
     .allclass
       list-style-type none 
       margin 0
-      margin-top 1rem
+      margin-top .42667rem
       padding 0
       .class
         display block 
-        height 6.66667rem
-        border-bottom 1px solid black
+        height 2.84444rem
+        border-bottom 1px solid #c8c8cd
         .class-description
-          width 14rem
+          width 5.97332rem
           display inline-block
           .title
             display block 
-            height 2rem
-            margin-top 0.5rem
-            font-size 1.2rem;
+            height 0.8532rem
+            margin-top 0.21333rem
+            font-size 0.512rem;
           .progress
             display block 
-            margin-top  1.3333rem
-            font-size 0.8666rem;
-            color green
+            margin-top  0.56887rem
+            font-size 0.36974rem;
+            color #29b774
         .class-img
           float right 
           display inline-block
-          width 7rem
-          margin-top 1rem
+          width 2.98662rem
+          height 2rem
+          margin-top .22667rem
           // margin-right .66667rem
 </style>

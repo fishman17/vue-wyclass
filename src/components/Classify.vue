@@ -159,21 +159,21 @@ export default {
     height initial
   .left
     position fixed
-    width 6rem
+    width 2.56rem
     height 100%
     background-color #f7f9fc
     margin 0
     padding 0
     list-style-type none
-    margin-top 3rem
+    margin-top 1.28rem
     .left-class
-      height 3.4rem
-      font-size 0.9rem
-      line-height 3.4rem
+      height 1.4506rem
+      font-size 0.384rem
+      line-height 1.4506rem
       text-align left
       .title
         display block
-        margin-left 1rem
+        margin-left 0.42667rem
       &.active
         background-color white
         font-weight bolder
@@ -181,28 +181,28 @@ export default {
         &:before
           content: '';
           position absolute
-          width 0.3rem
-          height 3.4rem
+          width 0.128rem
+          height 1.4506rem
           background-color #2cc17b
 
   .right  
-    width 15.5rem
+    width 6.61323rem
     // margin 1rem
-    margin-left 7rem
-    margin-top 3rem
-    margin-right 1rem
-    margin-bottom 2rem
+    margin-left 2.9867rem
+    margin-top 1.28rem
+    margin-right 0.42666rem
+    margin-bottom 0.85332rem
     .image
       display inline-block
-      width 15.5rem
+      width 6.61323rem
       &> img 
-        width 15.5rem
-        height 6rem 
+        width 6.61323rem
+        height 2.56rem 
     .right-class
       list-style-type none
       margin 0
       padding 0
-      margin-top 1rem
+      margin-top 0.42666rem
       .head
         font-weight bolder
         display block
@@ -222,18 +222,18 @@ export default {
         &>li
           flex 1
           display inline-block
-          margin-top 1rem
-          margin-right 0.2rem
+          margin-top 0.42666rem
+          margin-right 0.085332rem
         .detail
-          width 4.8rem
-          height 1.6667rem
-          line-height 1.6667rem
+          width 2.048rem
+          height 0.7111rem
+          line-height 0.7111rem
           // margin 
           display block 
           border 1px solid #d5dae7
-          border-radius 1rem
+          border-radius 0.42667rem
           text-align center 
-          font-size 0.8rem
+          font-size 0.34134rem
           
           
 </style>

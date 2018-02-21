@@ -102,26 +102,26 @@ export default {
   overflow scroll
   .user
     background-color white
-    border-bottom 0.1rem solid #ced1da
+    border-bottom 0.022666rem solid #ced1da
     .nav
       margin-top 8px
       margin-bottom 0
     .avatar
-      width: 4rem
-      height 4rem
-      border-radius 4rem
-      border 0.3333rem solid #ced1da
+      width: 1.50664rem
+      height 1.50664rem
+      border-radius 1.70664rem
+      border 0.14222rem solid #ced1da
       display inline-block
-      margin-left 0.5rem
-      margin-top 0.5rem
+      margin-left 0.21333rem
+      margin-top 0.21333rem
     .description
       display inline-block
       vertical-align top
       .title
-        font-size 1rem
+        font-size 0.42666rem
         font-weight 600
       .ways
-        font-size 0.8rem
+        font-size 0.34133rem
   .nav
     padding 0
     list-style-type none
@@ -139,6 +139,5 @@ export default {
               color red
               display block
               vertical-align: text-top 
-              font-size 100px
 
 </style>

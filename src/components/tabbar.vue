@@ -35,12 +35,12 @@ export default {
       }
     },
    	computed: {
-		isShowTabbar () {
-      let routeLength = this.$route.path.split('/').length;
-      // let home = this.$route.path.split('/')[1];
+      isShowTabbar () {
+        let routeLength = this.$route.path.split('/').length;
+        // let home = this.$route.path.split('/')[1];
 
-			return routeLength > 2  ? false : true;
-		}
+        return routeLength > 2  ? false : true;
+      }
     }, 
     methods:{
       changeToMain(){
@@ -71,24 +71,23 @@ export default {
         this.learncolor = iconColor;
         this.mycolor = iconColorActive;    
       },
-
     }
 }
 </script>
 
 <style lang="stylus" scoped>
-.tab {
-  .tabbar-item {
-    display: inline-block;
-
-    .icon {
-      font-size: 25px;
-    }
-  }
-
-  .mint-tabbar {
-    height: 8%;
-  }
-}
+.tab
+  .tabbar-item
+    display: inline-block
+    .icon 
+      font-size: 25px
+  .mint-tabbar 
+    height: 8%
+  .mint-tab-item
+    vertical-align center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
 </style>
 

@@ -58,7 +58,7 @@ export default {
 
 <style lang="stylus" scoped>
   .search
-    height 3rem
+    height 1.28rem
     width 100%
     margin 0 auto
     display flex
@@ -68,15 +68,15 @@ export default {
     .searchbar
       background-color #f2f4f7
       flex 9
-      margin 0.66667rem 
-      border-radius 1rem  
+      margin .28444rem 
+      border-radius .42666rem  
       .mintui-search
-        line-height 1.66667rem
-        margin-left 0.66667rem
+        line-height .71111rem
+        margin-left .28444rem
       .input
         background-color #f2f4f7
         width 85%
-        height 2rem
+        height .83222rem
         border 0
         outline none 
     .back

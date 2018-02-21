@@ -11,6 +11,8 @@ vue操作dom
 :class="a?'b':'c'"
 grid布局
 由于vue是getter和setter给对象属性， 当后台给的数据过来来，需要添加一个属性，这时候用this.$set(obj, '_isHover', false); 添加，否则将无法动态绑定
+浮点类型计算 utils
+flexble.js适配多终端
 ## Build Setup
 
 ``` bash
