@@ -21,7 +21,7 @@
         <mt-tab-item id="4">行家</mt-tab-item>
       </mt-navbar>
     </div>
-    <mt-tab-container v-model="selected">
+    <mt-tab-container v-model="selected" swipeable>
       <mt-tab-container-item id="1">
         <recommend/>
       </mt-tab-container-item>
@@ -54,7 +54,7 @@ export default {
   },
   data(){
     return{
-      selected: "1",
+      selected: "2",
     }
   },
   mounted(){
@@ -69,14 +69,19 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper
+  // position fixed
+  width 100%
+  height 92%
   .mint-search
       height initial
+  .mint-navbar .mint-tab-item.is-selected
+    margin 0
     // position relative
     // .serch
     //   position absolute
     //   top: 0
     //   margin: 0 auto 
-  .tab
+  // .tab
     // height 100px
     // width 100%
     // background-color red
@@ -86,6 +91,6 @@ export default {
     // .tab-item
     //   flex:1
     //   background-color blue
-  .router
-    height 400px
+  // .router
+  //   height 400px
 </style>
