@@ -5,17 +5,26 @@
         <img :src="item.imgSrc" alt="" class="image">
       </mt-swipe-item>
     </mt-swipe>
+    <div class="popular">
+      <!-- <span class="popular-title"></span> -->
+      <!-- <span v-for=""></span> -->
+    </div>
     <div class="courses">
       <ul v-for="types in recommend.types" :key="types.id">
         <span class="title">{{types.title}}</span>
         <span class="head">{{types.head}}</span>
         <li v-for="course in types.courses" :key="course.id" class="course">
-          <img :src="course.imgSrc" alt="">
-          <span class="course-title">{{course.title}}</span>
-          <star :size="24" :score="course.starLevel" class="star"></star>
-          <span class="starlevel">{{course.starLevel}}</span>
-          <span class="learnnumber">{{course.learnNumber}}人学过</span>
-          <span class="mainmessage">{{course.mainMessage}}</span>
+          <div class="course-image">
+            <img :src="course.imgSrc" alt="">
+          </div>
+          <div class="course-detail">
+            <span class="course-title">{{course.title}}</span>
+            <star :size="24" :score="course.starLevel" class="star"></star>
+            <span class="starlevel">{{course.starLevel}}</span>
+            <span class="learnnumber">{{course.learnNumber}}人学过</span>
+            <span class="mainmessage">{{course.mainMessage}}</span>
+          </div>
+          
         </li>
       </ul>
     </div>
@@ -114,6 +123,10 @@ export default {
                 }
               },
           }],
+          popular:{
+            title:'热门新知',
+            feed:['']
+          },
           types:[
             {
               title: '编辑精选',
@@ -293,7 +306,7 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper
-  background-color blue
+  background-color #f2f4f7
   margin-bottom 1.28rem
   .mint-tab-container
     .mint-swipe
@@ -306,7 +319,7 @@ export default {
   .courses
     background-color white
     padding 0.3333rem
-    margin-top 0.1111rem
+    margin-top 0.2rem
     &>ul
       padding 0
       .title
@@ -314,34 +327,66 @@ export default {
         font-size 0.3rem
         text-align center
         position relative 
+        color #81929a
         &:before
           content ''
           position absolute
           top: 47%;
           left: 39%;
-          width 0.2rem
-          height  0.02rem
-          background-color red
+          width 0.35rem
+          height 0.01rem
+          background-color #8b8f97
         &:after
           content ''
           position absolute
           top: 47%;
           right: 39%;
-          width 0.2rem
-          height  0.02rem
-          background-color red
+          width 0.35rem
+          height 0.01rem
+          background-color #8b8f97
       .head
         display block
-        font-size 0.5rem
+        font-size 0.6rem
         text-align center
       .course
         list-style-type none
-        margin 0
-        &>img
+        margin-top 0.5rem
+        width 10rem
+        .course-image
           display inline-block
-          width 3.6667rem
-          height 2.4684rem
-      .course-title
-        font-size 18px
+          &>img
+            width 4.2222rem
+            height 2.4684rem
+            vertical-align top
+            border-radius 0.3rem
+        .course-detail
+          vertical-align: top;
+          display inline-block
+          margin-left 0.3333rem
+          width 4.3333rem
+          height 2.8684rem
+          color #8b8f97
+          font-size 0.3rem
+          .course-title
+            display block
+            color black 
+            font-size 0.45rem
+          .star
+            display inline-block
+            margin-top 0.1111rem
+            margin-bottom 0.1111rem
+          .mainmessage
+            display block 
+            height 0.9111rem
+            // white-space inherit
+            // overflow hidden
+            // text-overflow ellipsis 
+            text-overflow: -o-ellipsis-lastline
+            overflow: hidden
+            text-overflow: ellipsis
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            font-size 0.35rem
 </style>
 

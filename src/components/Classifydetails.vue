@@ -17,7 +17,9 @@ export default {
         // return{
         //     classdeta3]il: [1,2,
         // }
-        return{}
+        return{
+            
+        }
     },
     methods:{
         back(){

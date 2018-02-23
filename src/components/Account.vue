@@ -55,6 +55,7 @@
       <li class="nav-item">
          <mt-cell title="设置" icon="more" is-link>
            <i slot="icon" class="icon iconfont icon-shezhi" ></i>
+           <mt-badge size="small">2</mt-badge>
          </mt-cell>
       </li>
     </ul>
