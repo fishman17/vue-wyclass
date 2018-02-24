@@ -13,6 +13,7 @@ import introduce from '@/components/Coursedetails/introduce'
 import catalog from '@/components/Coursedetails/catalog'
 import comment from '@/components/Coursedetails/comment'
 import Classifydetails from '@/components/Classifydetails' 
+import Login from '@/components/Login'
 import search from '@/components/search' 
 import NotFound from '@/components/NotFound'
 import setting from '@/components/Account/setting'
@@ -79,6 +80,11 @@ export default new Router({
       path: '/home/search',
       name: 'search',
       component: search,
+    },
+    {
+      path: '/account/login',
+      name: 'login',
+      component: Login,
     },
     {
       path:'/account/setting',

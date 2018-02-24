@@ -6,13 +6,19 @@
         <p class="title">{{user.username}}</p>
         <span class="target">{{user.target}}</span>
       </div>
-      <div class="manage">
-        <span class="myorder">我的订阅</span>
-        <span class="mycollect">我的收藏</span>
-        <span class="mydown">我的下载</span>
-      </div>
     </div>
-    <div class="nowlearn">
+    <div class="login" v-if="!user.username">
+      <div class="wrap">
+        <div class="button" @click="changeToLogin">登录</div>
+      </div>
+      
+    </div>
+    <div class="manage">
+      <span class="myorder">我的订阅</span>
+      <span class="mycollect">我的收藏</span>
+      <span class="mydown">我的下载</span>
+    </div>
+    <div class="nowlearn" v-if="user.nowLearnClass">
       <div class="head">
         <span class="title">在学的课程</span>
         <span class="seeall">查看全部</span>
@@ -35,16 +41,16 @@ export default {
   data(){
     return{
       user: {
-        src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
-        username: 'dmy123456789',
-        ways: '通过qq登录',
-        target: '2018好好奋斗，加油',
-        nowLearnClass: [
-          {id:18001,progress:5},
-          {id:18003,progress:0},
-          {id:18005,progress:34},
-          {id:18006,progress:100}
-          ],
+        // src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
+        // username: 'dmy123456789',
+        // ways: '通过qq登录',
+        // target: '2018好好奋斗，加油',
+        // nowLearnClass: [
+        //   {id:18001,progress:5},
+        //   {id:18003,progress:0},
+        //   {id:18005,progress:34},
+        //   {id:18006,progress:100}
+        //   ],
       },
       classList : [],
       allClass : [
@@ -59,9 +65,9 @@ export default {
     }
   },
   mounted(){
-    this.user.nowLearnClass.map((item)=>{
-      this.checkList(item);
-      });
+    // this.user.nowLearnClass.map((item)=>{
+    //   this.checkList(item);
+    //   });
   },
   methods:{
     checkList(item){    //通过user中的所学课程id从所有课程中寻找详细课程信息
@@ -73,6 +79,9 @@ export default {
       }
     },
     changeToDetail(classes){
+    },
+    changeToLogin(){
+      this.$router.push('/account/login');
     }
   }
 }
@@ -80,7 +89,7 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper 
-  background-color: #d9d9d9;
+  background-color: #f2f4f7;
   width: 100%;
   height: 92%;
   position: fixed;
@@ -88,7 +97,6 @@ export default {
   .user
     // height 7rem
     background-color: white;
-    border-bottom: .042667rem solid #ced1da;
     padding: .42667rem;
     .nav 
       margin-top: 8px;
@@ -114,17 +122,46 @@ export default {
         display: inline-block;
         margin-top: 0.21333rem;
         font-size: 0.34133rem;
-    .manage 
-      display: flex;
-      &>span 
-        margin-top: 0.21333rem;
-        flex: 1;
-        text-align: center;
-        border-right: 1px solid #ced1da
+  .login
+    height 4rem
+    width 10rem
+    background-color white
+    text-align center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrap
+      width 2.2rem
+      height 2.2rem
+      border-radius 50%
+      border 1px solid #2cc17b
+      .button
+        width 2rem
+        height 2rem
+        border-radius 50%
+        background-color #2cc17b
+        line-height 2rem
+        margin 0.1rem
+        color white
+        font-size 0.5rem
         &:active
           background-color #f2f4f7
-        &:last-child 
-          border-right: 0;
+  .manage 
+    background-color white
+    display: flex;
+    // border-bottom: .042667rem solid #ced1da;
+    height 0.9rem
+    // height 1rem
+    &>span 
+      margin-top: 0.21333rem;
+      flex: 1;
+      text-align: center;
+      border-right: 1px solid #ced1da
+      margin-bottom 0.1rem
+      &:active
+        background-color #f2f4f7
+      &:last-child 
+        border-right: 0;
   .nowlearn 
     margin-top: .21333rem;
     padding: .41333rem;

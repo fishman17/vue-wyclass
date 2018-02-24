@@ -1,14 +1,21 @@
 <template>
   <div class="wrapper">
     <div class="user">
-      <img :src="user.src" alt="" class="avatar"/>
-      <div class="description">
-        <p class="title">{{user.username}}</p>
-        <span class="ways">{{user.ways}}</span>
+      <div v-if="user.username">
+        <img :src="user.src" alt="" class="avatar"/>
+        <div class="description">
+          <p class="title">{{user.username}}</p>
+          <span class="ways">{{user.ways}}</span>
+        </div>
       </div>
+      <div class="login" v-if="!user.username">
+        <div class="wrap">
+          <div class="button" @click="changeToLogin">登录</div>
+        </div>
+      </div>
+      
       <ul class="nav">
       <li class="nav-item">
-        
         <mt-cell title="学习兴趣"   is-link>
           <i slot="icon" class="icon iconfont icon-iconxuexisel" ></i>
         </mt-cell>
@@ -85,15 +92,18 @@ export default {
   data(){
     return{
       user: {
-        src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
-        username: 'dmy123456789',
-        ways: '通过qq登录',
+        // src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
+        // username: 'dmy123456789',
+        // ways: '通过qq登录',
       }
     }
   },
   methods:{
     changeToSetting(){
       this.$router.push('/account/setting');
+    },
+    changeToLogin(){
+      this.$router.push('/account/login');
     }
   }
 }
@@ -128,6 +138,30 @@ export default {
         font-weight 600
       .ways
         font-size 0.34133rem
+    .login
+      height 4rem
+      width 10rem
+      background-color white
+      text-align center
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .wrap
+        width 2.2rem
+        height 2.2rem
+        border-radius 50%
+        border 1px solid #2cc17b
+        .button
+          width 2rem
+          height 2rem
+          border-radius 50%
+          background-color #2cc17b
+          line-height 2rem
+          margin 0.1rem
+          color white
+          font-size 0.5rem
+          &:active
+            background-color #f2f4f7
   .nav
     padding 0
     list-style-type none
