@@ -101,7 +101,7 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper
-  background-color  #d9d9d9
+  background-color  #f2f4f7
   width 100%
   height 92%
   position fixed
@@ -140,7 +140,7 @@ export default {
             .icon 
               vertical-align: text-top 
               font-size 23px
-              color #707070
+              color #99a4bf
             .mint-cell-text
               color red
               display block

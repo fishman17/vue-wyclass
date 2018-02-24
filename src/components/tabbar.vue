@@ -24,7 +24,7 @@
 
 <script>
 const iconColor = "color: #cdcdcd";
-const iconColorActive ="color: #2c2c2c";
+const iconColorActive ="color: #3c4a55";
 export default {  
     data(){
       return{

@@ -120,7 +120,9 @@ export default {
         margin-top: 0.21333rem;
         flex: 1;
         text-align: center;
-        border-right: 1px solid #ced1da;
+        border-right: 1px solid #ced1da
+        &:active
+          background-color #f2f4f7
         &:last-child 
           border-right: 0;
   .nowlearn 
@@ -141,6 +143,8 @@ export default {
         margin-right: 0.56889rem;
         margin-top: 0.14222rem;
         color #c8c8cd;
+        &:active
+          background-color #f2f4f7
         &:after 
           border: solid 2px #c8c8cd;
           border-bottom-width: 0;
@@ -162,6 +166,8 @@ export default {
         display block 
         height 2.84444rem
         border-bottom 1px solid #c8c8cd
+        &:active
+          background-color #f2f4f7
         .class-description
           width 5.97332rem
           display inline-block

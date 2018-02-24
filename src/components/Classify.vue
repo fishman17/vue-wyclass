@@ -234,6 +234,8 @@ export default {
           border-radius 0.42667rem
           text-align center 
           font-size 0.34134rem
+          &:active
+            background-color #f2f4f7
           
           
 </style>

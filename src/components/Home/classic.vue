@@ -339,6 +339,8 @@ export default {
         margin-top 0.42667rem
         margin 0.384rem
         vertical-align: middle
+        &:active
+          background-color #f2f4f7
         &>img 
           width 4.224rem
           height 2.56rem
@@ -352,7 +354,7 @@ export default {
           .learnnumber
             font-size 0.29867rem
             color #a6abb3
-          .newprice
+          .newprice 
             font-size 0.46933rem
             color #ff4400
           .oldprice

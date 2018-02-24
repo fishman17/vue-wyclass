@@ -82,4 +82,6 @@ export default {
     .back
       text-align center
       flex 1
+      &:active
+        background-color #f2f4f7
 </style>

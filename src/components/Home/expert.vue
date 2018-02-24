@@ -115,6 +115,8 @@ export default {
   .expert
     width 10rem
     border-bottom 1px solid #e6eaf2
+    &:active
+      background-color #f2f4f7
     img 
       width 2rem
       height 2rem

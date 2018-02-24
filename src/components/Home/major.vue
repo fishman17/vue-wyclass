@@ -64,6 +64,8 @@ export default {
     background-color white
     padding 0.3rem
     margin-bottom 0.3rem
+    &:active
+      background-color #f2f4f7
     img 
       width 8.8rem
       height 5rem

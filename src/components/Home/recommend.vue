@@ -334,7 +334,7 @@ export default {
           top: 47%;
           left: 39%;
           width 0.35rem
-          height 0.01rem
+          height 0.02rem
           background-color #8b8f97
         &:after
           content ''
@@ -342,7 +342,7 @@ export default {
           top: 47%;
           right: 39%;
           width 0.35rem
-          height 0.01rem
+          height 0.02rem
           background-color #8b8f97
       .head
         display block
@@ -351,7 +351,10 @@ export default {
       .course
         list-style-type none
         margin-top 0.5rem
-        width 10rem
+        width 9.4rem
+        height 2.5rem
+        &:active
+          background-color #f2f4f7
         .course-image
           display inline-block
           &>img
