@@ -29,10 +29,10 @@
         <classic/>
       </mt-tab-container-item>
       <mt-tab-container-item id="3">
-        <expert/>
+        <major/>
       </mt-tab-container-item>
       <mt-tab-container-item id="4">
-        <major/>
+        <expert/>
       </mt-tab-container-item>
     </mt-tab-container>
   </div>
@@ -54,7 +54,7 @@ export default {
   },
   data(){
     return{
-      selected: "1",
+      selected: "4",
     }
   },
   mounted(){

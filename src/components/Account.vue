@@ -52,7 +52,7 @@
             <i slot="icon" class="icon iconfont icon-weibiaoti2fuzhi11" ></i>
          </mt-cell>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" @click="changeToSetting">
          <mt-cell title="设置" icon="more" is-link>
            <i slot="icon" class="icon iconfont icon-shezhi" ></i>
            <mt-badge size="small">2</mt-badge>
@@ -91,6 +91,11 @@ export default {
       }
     }
   },
+  methods:{
+    changeToSetting(){
+      this.$router.push('Account/setting');
+    }
+  }
 }
 </script>
 
