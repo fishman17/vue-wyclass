@@ -114,7 +114,7 @@ export default {
     margin-left 0.5rem
   .expert
     width 10rem
-    border-bottom 1px solid blue
+    border-bottom 1px solid #e6eaf2
     img 
       width 2rem
       height 2rem
@@ -132,15 +132,16 @@ export default {
       .describe
         display block
         margin-bottom 0.2rem
-        color blue
+        color #8b8f97
       .number
-        color blue
+        color #8b8f97
     .recommend
       font-size 0.4rem
       margin 0.3rem
       text-align left
+      color #8b8f97
       span 
-        color blue
+        color black
         white-space nowrap
         overflow hidden
         text-overflow ellipsis 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home/Home'
-import Account from '@/components/Account'
+import Account from '@/components/Account/Account'
 import Mystudy from '@/components/Mystudy'
 import classify from '@/components/Classify'
 import recommend from '@/components/Home/recommend'
@@ -15,6 +15,7 @@ import comment from '@/components/Coursedetails/comment'
 import Classifydetails from '@/components/Classifydetails' 
 import search from '@/components/search' 
 import NotFound from '@/components/NotFound'
+import setting from '@/components/Account/setting'
 Vue.use(Router)
 
 export default new Router({
@@ -41,7 +42,7 @@ export default new Router({
     {
       path: '/account',
       name: 'Account',
-      component: Account
+      component: Account,
     },
     {
       path: '/mystudy',
@@ -78,6 +79,10 @@ export default new Router({
       path: '/home/search',
       name: 'search',
       component: search,
+    },
+    {
+      path:'/account/setting',
+      component:setting
     },
     {
       path: '*',

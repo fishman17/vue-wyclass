@@ -93,7 +93,7 @@ export default {
   },
   methods:{
     changeToSetting(){
-      this.$router.push('Account/setting');
+      this.$router.push('/account/setting');
     }
   }
 }
