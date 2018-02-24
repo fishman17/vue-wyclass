@@ -56,18 +56,18 @@ export default new Router({
       component: classify
     },
     {
-      path: '/coursedetails',
+      path: '/home/coursedetails',
       name: 'Coursedetails',
       component: Coursedetails,
-      children:[
-        {
-          path: '',
-          redirect: 'introduce'
-        },
-        { path: 'introduce', component: introduce, name: 'introduce' },
-        { path: 'catalog', component: catalog, name: 'catalog' },
-        { path: 'comment', component:comment, name: 'comment' },
-      ]
+      // children:[
+      //   {
+      //     path: '',
+      //     redirect: 'introduce'
+      //   },
+      //   { path: 'introduce', component: introduce, name: 'introduce' },
+      //   { path: 'catalog', component: catalog, name: 'catalog' },
+      //   { path: 'comment', component:comment, name: 'comment' },
+      // ]
     },
     {
       path: '/classifydetails',

@@ -8,7 +8,7 @@
     <div class="courses">
       <ul class="recommend" v-for="types in classic.courses" :key="types.id">
         <span class="head">{{types.head}}</span>
-        <li v-for="course in types.data" :key="course.id" class="course-detail">
+        <li v-for="course in types.data" :key="course.id" class="course-detail" @click="changeToCoursedetails">
           <img :src="course.imgSrc" alt="">
           <span class="title">{{course.title}}</span>
           <div class="relevent">
@@ -305,6 +305,11 @@ export default {
   },
   components:{
     star,
+  },
+  methods:{
+    changeToCoursedetails(){
+      this.$router.push('/home/coursedetails');
+    },
   }
 }
 </script>
