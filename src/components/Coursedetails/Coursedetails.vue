@@ -1,22 +1,8 @@
 <template>
   <div class="wrapper">
-      <!-- <div class="toolbar">一些工具</div>
-      <div class="img"><img src="" alt=""></div>
-      <div class="tab border-1px">
-        <div class="tab-item">
-            <router-link to="introduce">介绍</router-link>
-        </div>
-        <div class="tab-item">
-            <router-link to="catalog">目录</router-link>
-        </div>
-        <div class="tab-item">
-            <router-link to="comment">评价</router-link>
-        </div>
-      </div>
-      <router-view></router-view> -->
     <div class="title">
         <span class="back" @click="back">&lt;</span>
-        <span class="title">课程界面</span>
+        <span class="head">课程界面</span>
     </div>
     <img :src="course.imgSrc" alt="" class="main-image">
     <mt-navbar v-model="selected">
@@ -36,12 +22,12 @@
       </mt-tab-container-item>
     </mt-tab-container>
     <div class="fixed">
-        <div class="want">
-            <i></i>
+        <div class="want" @click="wantLearn">
+            <i class="icon iconfont icon-xiangqu" :class="isWantLearn? 'active':''"></i>
             <span>想学</span>
         </div>
         <div class="addtostudy">
-            <i></i>
+            <i class="icon iconfont icon-jia"></i>
             <span>加入学习</span>
         </div>
     </div>
@@ -82,12 +68,16 @@ export default {
                       }
                     },
                   },
-            selected: '1'
+            selected: '1',
+            isWantLearn: true,   //想学icon红心是否点亮，依赖于用户我的收藏中是否存在当前课程
         }
     },
     methods:{
         back(){
             this.$router.go('-1');
+        },
+        wantLearn(){
+            this.isWantLearn = !this.isWantLearn;
         }
     }
 }
@@ -97,17 +87,45 @@ export default {
 .wrapper
   background-color white
   .title
+    position fixed
+    top 0
+    right 0
+    left 0
     height 1.2rem
-    background-color #f7f9fc
+    background-color white
     line-height 1.2rem
     .back
       font-size 0.8rem
       margin-left 0.3rem
-    .title
+    .head
       font-size 0.6rem
       position absolute
-      left 45%
+      left 38%
   .main-image
+    margin-top 1.2rem
     width 10rem
     height 4rem
+  .fixed
+    position fixed 
+    bottom 0
+    left 0
+    right 0
+    height 1rem
+    font-size 0
+    text-align center
+    line-height 1rem
+    border-top 1px solid #e6eaf2
+    margin-bottom -1px
+    .want
+      width 5rem
+      display inline-block
+      background-color white
+      font-size 0.4rem
+      .active
+        color red
+    .addtostudy
+      width 5rem
+      display inline-block
+      background-color #ff632a
+      font-size 0.4rem
 </style>

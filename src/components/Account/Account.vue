@@ -62,7 +62,7 @@
       <li class="nav-item" @click="changeToSetting">
          <mt-cell title="设置" icon="more" is-link>
            <i slot="icon" class="icon iconfont icon-shezhi" ></i>
-           <mt-badge size="small">2</mt-badge>
+           <mt-badge size="small" v-if="user.setting.badge">{{user.setting.badge}}</mt-badge>
          </mt-cell>
       </li>
     </ul>
@@ -92,9 +92,12 @@ export default {
   data(){
     return{
       user: {
-        // src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
-        // username: 'dmy123456789',
-        // ways: '通过qq登录',
+        src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
+        username: 'dmy123456789',
+        ways: '通过qq登录',
+        setting: {
+          badge: 2,
+        }
       }
     }
   },

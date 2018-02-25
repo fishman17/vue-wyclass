@@ -2,7 +2,7 @@
   <div class="wrapper">
       <div class="title">
           <span class="back" @click="back">&lt;</span>
-          <span class="title">设置</span>
+          <span class="head">设置</span>
       </div>
       <ul class="settings">
           <li class="setting">
@@ -71,8 +71,8 @@ export default {
     .back
       font-size 0.8rem
       margin-left 0.3rem
-    .title
-      font-size 0.6 rem
+    .head
+      font-size 0.6rem
       position absolute
       left 45%
   .settings
@@ -96,7 +96,8 @@ export default {
         display inline-block
         margin-top 0.2rem
         margin-right 0.3rem
-        line-height 0.8rem
+        line-height 1rem
+        font-size 0.35rem
         text-align right
         // background-color red
         .mint-switch

@@ -155,7 +155,7 @@ export default {
                       }
                     },
                   },{
-                    title:'我们管他叫人工智能课程2',
+                    title:'我们管他叫课程2',
                     imgSrc:'http://edu-image.nosdn.127.net/4fef8668-4a30-4764-bb9a-9659b7c581b5.jpg?imageView&thumbnail=960y440&quality=100',
                     starLevel: 4.6,
                     learnNumber: 468,
@@ -317,11 +317,12 @@ export default {
           width 10rem
           height 4.2667rem
   .courses
-    background-color white
     padding 0.3333rem
     margin-top 0.2rem
+    background-color white
     &>ul
       padding 0
+      margin-bottom 1rem
       .title
         display block
         font-size 0.3rem
@@ -370,6 +371,7 @@ export default {
           height 2.8684rem
           color #8b8f97
           font-size 0.3rem
+          position relative
           .course-title
             display block
             color black 
@@ -379,6 +381,8 @@ export default {
             margin-top 0.1111rem
             margin-bottom 0.1111rem
           .mainmessage
+            position absolute
+            bottom 0.32rem
             display block 
             height 0.9111rem
             // white-space inherit

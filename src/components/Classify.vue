@@ -168,7 +168,7 @@ export default {
     margin-top 1.28rem
     .left-class
       height 1.4506rem
-      font-size 0.384rem
+      font-size 0.354rem
       line-height 1.4506rem
       text-align left
       .title
