@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './vuex/store'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/common/stylus/index.styl'
@@ -12,9 +13,23 @@ Vue.use(MintUI)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+router.beforeEach((to, from, next) => {
+  // NProgress.start();
+  if (to.path == '/login') {
+    sessionStorage.removeItem('userInfo');
+  }
+  let userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+  if (!userInfo && to.path != '/account/login') {
+    next({ path: '/account/login' })
+  } else {
+    next()
+  }
+})
+
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })

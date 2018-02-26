@@ -88,17 +88,10 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data(){
     return{
-      user: {
-        src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
-        username: 'dmy123456789',
-        ways: '通过qq登录',
-        setting: {
-          badge: 2,
-        }
-      }
     }
   },
   methods:{
@@ -108,6 +101,11 @@ export default {
     changeToLogin(){
       this.$router.push('/account/login');
     }
+  },
+  computed:{
+    ...mapGetters({
+      user: 'userInfo'
+    })
   }
 }
 </script>

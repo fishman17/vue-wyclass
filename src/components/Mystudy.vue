@@ -11,7 +11,6 @@
       <div class="wrap">
         <div class="button" @click="changeToLogin">登录</div>
       </div>
-      
     </div>
     <div class="manage">
       <span class="myorder">我的订阅</span>
@@ -37,21 +36,10 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data(){
     return{
-      user: {
-        // src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
-        // username: 'dmy123456789',
-        // ways: '通过qq登录',
-        // target: '2018好好奋斗，加油',
-        // nowLearnClass: [
-        //   {id:18001,progress:5},
-        //   {id:18003,progress:0},
-        //   {id:18005,progress:34},
-        //   {id:18006,progress:100}
-        //   ],
-      },
       classList : [],
       allClass : [
         {id:18001,title:'C/C++',imgSrc:"http://img-ph-mirror.nosdn.127.net/nShw94SiVxzgQevSJqNElg==/6631798940933044057.png?imageView&thumbnail=223y124&quality=100"},
@@ -60,9 +48,13 @@ export default {
         {id:18004,title:'跟郝敏老师学声乐唱歌技巧',imgSrc:"http://img-ph-mirror.nosdn.127.net/9qAwvh_VGX8h0W3x-VmGRA==/6597390824054084846.jpg?imageView&thumbnail=223y124&quality=100"},
         {id:18005,title:'Git实用教程',imgSrc:"http://img-ph-mirror.nosdn.127.net/8ObC7AzOsOVAR8ph-6-MJw==/6631564744955406715.png?imageView&thumbnail=223y124&quality=100"},
         {id:18006,title:'高效阅读：如何投资你的碎片化时间',imgSrc:"http://edu-image.nosdn.127.net/8F0FC44AFD2BB8874A3150254198FC91.png?imageView&thumbnail=450y250&quality=100"},
-    
       ],
     }
+  },
+  computed:{
+    ...mapGetters({
+        user: 'userInfo'
+    })
   },
   mounted(){
     // this.user.nowLearnClass.map((item)=>{

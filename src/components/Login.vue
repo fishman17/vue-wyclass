@@ -7,30 +7,74 @@
       <div class="login">
           <div class="username">
               <label>账号:</label>
-              <input type="text" placeholder="账号或手机邮箱">
+              <input type="text" v-model="username" placeholder="账号或手机邮箱">
           </div>
           <div class="password">
               <label>密码:</label>
-              <input type="password">
+              <input v-model="password" type="password">
           </div>
           <!-- <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
           <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field> -->
-          <button>登录</button>
+          <button @click="login">登录</button>
       </div>
    </div>
 </template>
 
 <script>
+import { requestLogin } from '../api/api'
+import { mapActions } from 'vuex'
 export default {
     data(){
         return{
-            
+            username: '',
+            password: '',
         }
     },
     methods:{
-        back(){
+        back() {
             this.$router.go('-1')
         },
+
+        ...mapActions({ setUserInfo: 'setUserInfo' }),
+
+        login() {
+            if (!this.username || !this.password) {
+                _.alert('请填写完整')
+                return
+            }
+            let data = {
+                username: this.username,
+                password: this.password
+            }
+            this.$store.dispatch('setLoadingState', true)
+            // requestLogin(data)
+            //     .then(res => {
+            //         console.log(res)
+            //         if(res.success) {
+                        // let userInfo = Object.assign()
+                        this.$store.dispatch('setLoadingState', false)
+                        this.setUserInfo({
+                                src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
+                                username: 'dmy123456789',
+                                ways: '通过qq登录',
+                                target: '2018好好奋斗，加油',
+                                setting: {
+                                badge: 2,
+                                },
+                                nowLearnClass: [
+                                {id:18001,progress:5},
+                                {id:18003,progress:0},
+                                {id:18005,progress:34},
+                                {id:18006,progress:100}
+                                ],
+                            })
+                        this.$router.replace('/home')
+                //     }
+                // })
+                // .catch(error => {
+                //     console.log(error)
+                // })
+        }
     }
 }
 </script>
