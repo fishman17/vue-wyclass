@@ -10,8 +10,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+const appData = require('../data.json')
+const userList = appData.userList
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
+const bodyParser = require('body-parser');  //express 解析body
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -22,6 +26,43 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    before(app) {
+      app.use(bodyParser.json()); // for parsing application/json
+      app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+      app.post('/api/login', (req, res) =>{
+        let userData = req.body;
+        let isExist = false;
+        // console.log(user);
+        userList.map((user) =>{
+          if(user.username == userData.username && user.password == userData.password){
+            res.json({
+              ...user
+            });
+            isExist = true;
+            return;
+          }
+        })
+        if(!isExist){
+          res.json(
+            "notFound"
+          );
+        }
+          
+
+      });
+      app.get('/api/goods', function (req, res) {
+        // res.json({
+        //   errno: 0,
+        //   data: goods
+        // })
+      });
+      app.get('/api/ratings', function (req, res) {
+        // res.json({
+        //   errno: 0,
+        //   data: ratings
+        // })
+      });
+    },
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [

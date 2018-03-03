@@ -1,13 +1,13 @@
 <template>
   <div class="wrapper">
-    <div class="user" v-if="user.username">
+    <div class="user" v-if="user.name">
       <img :src="user.src" alt="" class="avatar"/>
       <div class="description">
-        <p class="title">{{user.username}}</p>
+        <p class="title">{{user.name}}</p>
         <span class="target">{{user.target}}</span>
       </div>
     </div>
-    <div class="login" v-if="!user.username">
+    <div class="login" v-if="!user.name">
       <div class="wrap">
         <div class="button" @click="changeToLogin">登录</div>
       </div>
@@ -53,7 +53,7 @@ export default {
   },
   computed:{
     ...mapGetters({
-        user: 'userInfo'
+        user: 'getUserData'
     })
   },
   mounted(){
@@ -143,6 +143,7 @@ export default {
     display: flex;
     // border-bottom: .042667rem solid #ced1da;
     height 0.9rem
+    line-height 0.5rem
     // height 1rem
     &>span 
       margin-top: 0.21333rem;
@@ -159,7 +160,7 @@ export default {
     padding: .41333rem;
     min-height: 100%;
     background-color: white;
-
+   
     .head 
       .title 
         // display inline-block

@@ -1,14 +1,14 @@
 <template>
   <div class="wrapper">
     <div class="user">
-      <div v-if="user.username">
+      <div v-if="user.name">
         <img :src="user.src" alt="" class="avatar"/>
         <div class="description">
-          <p class="title">{{user.username}}</p>
+          <p class="title">{{user.name}}</p>
           <span class="ways">{{user.ways}}</span>
         </div>
       </div>
-      <div class="login" v-if="!user.username">
+      <div class="login" v-if="!user.name">
         <div class="wrap">
           <div class="button" @click="changeToLogin">登录</div>
         </div>
@@ -92,6 +92,14 @@ import {mapGetters} from 'vuex'
 export default {
   data(){
     return{
+      // user: {
+        // src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
+        // username: 'dmy123456789',
+        // ways: '通过qq登录',
+        // setting: {
+        //   badge: 2,
+        // }
+      // }
     }
   },
   methods:{
@@ -104,7 +112,7 @@ export default {
   },
   computed:{
     ...mapGetters({
-      user: 'userInfo'
+      user: 'getUserData'
     })
   }
 }

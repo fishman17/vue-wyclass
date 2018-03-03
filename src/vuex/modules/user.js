@@ -1,13 +1,13 @@
-import {requestLogin} from '../../api/api'
 import * as types from '../types'
 
 const state = {
     // 用户登录状态
     loginStatus: JSON.parse(sessionStorage.getItem('loginStatus')) || false,
     // 用户登录信息
-    userInfo: JSON.parse(sessionStorage.getItem('userInfo')) || {},
+    // userInfo: JSON.parse(sessionStorage.getItem('userInfo')) || {},
+    userInfo: {},
     // 用户数据信息
-    userData: []
+    userData: {}
 }
 
 const actions = {
@@ -18,7 +18,7 @@ const actions = {
         sessionStorage.setItem('userInfo', JSON.stringify(res))
         sessionStorage.setItem('loginStatus', true)
         commit(types.SET_USER_INFO, res)
-        commit(types.SET_LOGIN_STATUS, true)
+        commit(types.SET_LOGIN_STATUS, false)
     },
 
     /**
@@ -29,25 +29,22 @@ const actions = {
         sessionStorage.removeItem('userInfo')
         commit(types.SET_LOGIN_STATUS, false)
         commit(types.SET_USER_INFO, {})
+        commit(types.SET_USER_DATA, {})
     },
 
     /**
-     * 请求用户信息
+     * 设置用户信息
      */
-    getUserData({ commit }, id) {
-        commit(types.COM_LOADING_STATUS, true)
-        requestLogin(id)
-            .then(res => {
-                commit(types.COM_LOADING_STATUS, false)
-                commit(types.GET_USER_DATA, res.data)
-            })
+    setUserData({ commit },res) {
+        commit(types.COM_LOADING_STATUS, false)
+        commit(types.SET_USER_DATA, res)
     }
 }
 
 const getters = {
     getUserData: state => state.userData,
     loginStatus: state => state.loginStatus,
-    userInfo: state => state.userInfo
+    userInfo: state => state.userInfo,
 }
 
 const mutations = {
@@ -59,7 +56,7 @@ const mutations = {
         state.loginStatus = status
     },
 
-    [types.GET_USER_DATA](state, res) {
+    [types.SET_USER_DATA](state, res) {
         state.userData = res
     }
     

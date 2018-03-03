@@ -36,78 +36,108 @@
               <div class="head">关于</div>
               <div class="tail">&gt;</div>
           </li>
+          <li class="setting">
+              <button @click="signOut">点此退出登录哦</button>
+          </li>
       </ul>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-    data(){
-        return{
-            isFruent: true,
-            isContinuity:false,
-            couldPlay:true,
-            couldDown:false,
-        }
+  data() {
+    return {
+      isFruent: true,
+      isContinuity: false,
+      couldPlay: true,
+      couldDown: false
+    };
+  },
+  methods: {
+    back() {
+      this.$router.go("-1");
     },
-    methods:{
-        back(){
-            this.$router.go('-1')
-        },
-        changeFruent(){
-            this.isFruent = !this.isFruent;
-        }
+    changeFruent() {
+      this.isFruent = !this.isFruent;
+    },
+    ...mapActions({
+      userOut: "setSignOut"
+    }),
+    signOut(){
+      this.userOut();
+      this.$router.push('/account/login');
     }
-}
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
-@import "../../common/stylus/mixin";
-.wrapper
-  .title
-    height 1.2rem
-    background-color #f7f9fc
-    line-height 1.2rem
-    .back
-      font-size 0.8rem
-      margin-left 0.3rem
-    .head
-      font-size 0.6rem
-      position absolute
-      left 45%
-  .settings
-    margin 0
-    padding 0
-    .setting
-      list-style-type none 
-      width 9.7rem
-      height 1.4rem
-      margin-left 0.3rem
-      text-align left 
-      line-height 1.4rem
-      color #666666
-      border-1px(rgba(7, 17, 27, 0.1));
-      .head
-        font-size 0.4rem
-        display inline-block
-      .tail
-        float right 
-        height 0.8rem
-        display inline-block
-        margin-top 0.2rem
-        margin-right 0.3rem
-        line-height 1rem
-        font-size 0.35rem
-        text-align right
-        // background-color red
-        .mint-switch
-          display inline-block
-          margin-right -0.3rem
-          .mint-switch-core
-            border-color: #2cc17b;
-            background-color: #2cc17b;
-        .active
-          color: #26a2ff
-          
+@import '../../common/stylus/mixin';
 
+.wrapper {
+    .title {
+        height: 1.2rem;
+        background-color: #f7f9fc;
+        line-height: 1.2rem;
+
+        .back {
+            font-size: 0.8rem;
+            margin-left: 0.3rem;
+        }
+
+        .head {
+            font-size: 0.6rem;
+            position: absolute;
+            left: 45%;
+        }
+    }
+
+    .settings {
+        margin: 0;
+        padding: 0;
+
+        .setting {
+            list-style-type: none;
+            width: 9.7rem;
+            height: 1.4rem;
+            margin-left: 0.3rem;
+            text-align: left;
+            line-height: 1.4rem;
+            color: #666666;
+            border-1px(rgba(7, 17, 27, 0.1));
+
+            .head {
+                font-size: 0.4rem;
+                display: inline-block;
+            }
+
+            .tail {
+                float: right;
+                height: 0.8rem;
+                display: inline-block;
+                margin-top: 0.2rem;
+                margin-right: 0.3rem;
+                line-height: 1rem;
+                font-size: 0.35rem;
+                text-align: right;
+
+                // background-color red
+                .mint-switch {
+                    display: inline-block;
+                    margin-right: -0.3rem;
+
+                    .mint-switch-core {
+                        border-color: #2cc17b;
+                        background-color: #2cc17b;
+                    }
+                }
+
+                .active {
+                    color: #26a2ff;
+                }
+            }
+        }
+    }
+}
 </style>

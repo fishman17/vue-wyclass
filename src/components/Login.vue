@@ -21,106 +21,112 @@
 </template>
 
 <script>
-import { requestLogin } from '../api/api'
-import { mapActions } from 'vuex'
+import { requestLogin } from "../api/api";
+import { mapActions } from "vuex";
 export default {
-    data(){
-        return{
-            username: '',
-            password: '',
-        }
+  data() {
+    return {
+      username: "",
+      password: ""
+    };
+  },
+  methods: {
+    back() {
+      this.$router.go("-1");
     },
-    methods:{
-        back() {
-            this.$router.go('-1')
-        },
 
-        ...mapActions({ setUserInfo: 'setUserInfo' }),
+    ...mapActions(
+      [
+        'setUserData','setUserInfo'
+      ]
+    ),
+    
 
-        login() {
-            if (!this.username || !this.password) {
-                _.alert('请填写完整')
-                return
-            }
-            let data = {
-                username: this.username,
-                password: this.password
-            }
-            this.$store.dispatch('setLoadingState', true)
-            // requestLogin(data)
-            //     .then(res => {
-            //         console.log(res)
-            //         if(res.success) {
-                        // let userInfo = Object.assign()
-                        this.$store.dispatch('setLoadingState', false)
-                        this.setUserInfo({
-                                src: 'http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg',
-                                username: 'dmy123456789',
-                                ways: '通过qq登录',
-                                target: '2018好好奋斗，加油',
-                                setting: {
-                                badge: 2,
-                                },
-                                nowLearnClass: [
-                                {id:18001,progress:5},
-                                {id:18003,progress:0},
-                                {id:18005,progress:34},
-                                {id:18006,progress:100}
-                                ],
-                            })
-                        this.$router.replace('/home')
-                //     }
-                // })
-                // .catch(error => {
-                //     console.log(error)
-                // })
+    login() {
+      if (!this.username || !this.password) {
+        alert("请填写完整");
+        return;
+      }
+      let data = {
+        username: this.username,
+        password: this.password
+      };
+      this.$store.dispatch("setLoadingState", true);
+
+      requestLogin(data).then(res => {
+        if(res == "notFound"){
+            console.log(res);
+        }else{
+            this.setUserInfo(data);
+            this.setUserData(res);
+            this.$router.replace("/home");
         }
+        
+      });
     }
-}
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
-.wrapper
-  background-color white
-  .title
-    height 1.2rem
-    background-color #f7f9fc
-    line-height 1.2rem
-    .back
-      font-size 0.8rem
-      margin-left 0.3rem
-    .title
-      font-size 0.6rem
-      position absolute
-      left 45%
-  .login 
-    width 8rem
-    margin 0 auto
-    .username,.password
-      margin 0.3rem
-      border-bottom 1px solid #e6eaf2 
-      height 1.6667rem
-      line-height 1.6667rem
-      color #99a4bf
-      &>label
-        font-size 0.45rem
-      &>input 
-        border 0
-        background-color white
-        width 6.2rem
-        height 0.7rem
-        outline: none
-        font-size 0.45rem
-    //   input 
-    //     background-color white
-    button 
-      width 7.4rem
-      height 1rem
-      margin 0.3rem
-      border-radius 0.2rem
-      background-color #2ab868
-      border 0
-      outline: none
-      font-size 0.45rem
-      color white
+.wrapper {
+    background-color: white;
+
+    .title {
+        height: 1.2rem;
+        background-color: #f7f9fc;
+        line-height: 1.2rem;
+
+        .back {
+            font-size: 0.8rem;
+            margin-left: 0.3rem;
+        }
+
+        .title {
+            font-size: 0.6rem;
+            position: absolute;
+            left: 45%;
+        }
+    }
+
+    .login {
+        width: 8rem;
+        margin: 0 auto;
+
+        .username, .password {
+            margin: 0.3rem;
+            border-bottom: 1px solid #e6eaf2;
+            height: 1.6667rem;
+            line-height: 1.6667rem;
+            color: #99a4bf;
+
+            &>label {
+                font-size: 0.45rem;
+            }
+
+            &>input {
+                border: 0;
+                background-color: white;
+                width: 6.2rem;
+                height: 0.7rem;
+                outline: none;
+                font-size: 0.45rem;
+            }
+        }
+
+        // input
+        // background-color white
+        button {
+            width: 7.4rem;
+            height: 1rem;
+            margin: 0.3rem;
+            border-radius: 0.2rem;
+            background-color: #2ab868;
+            border: 0;
+            outline: none;
+            font-size: 0.45rem;
+            color: white;
+        }
+    }
+}
 </style>

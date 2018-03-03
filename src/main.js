@@ -19,11 +19,12 @@ router.beforeEach((to, from, next) => {
     sessionStorage.removeItem('userInfo');
   }
   let userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
-  if (!userInfo && to.path != '/account/login') {
-    next({ path: '/account/login' })
-  } else {
-    next()
-  }
+  // if (!userInfo && to.path != '/account/login') {
+  //   next({ path: '/account/login' })
+  // } else {
+  //   next()
+  // }              //默认可选择不登录状态
+  next()
 })
 
 new Vue({

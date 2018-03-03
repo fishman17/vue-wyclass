@@ -1,0 +1,48 @@
+{
+    "userList": [
+        {
+            "username": "admin",
+            "password": "123456",
+            "src": "http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg",
+            "name": "dmy123456789",
+            "ways": "通过qq登录",
+            "target": "2018好好奋斗，加油",
+            "setting": {
+                "badge": 3
+            },
+            "nowLearnClass": [
+                {
+                    "id": 18001,"progress": 5
+                },
+                {   "id": 18003,"progress": 0
+                },
+                {   "id": 18005,"progress": 34
+                },
+                {   "id": 18006,"progress": 100
+                }
+            ]
+        },
+        {
+            "username": "dmy",
+            "password": "123456",
+            "src": "http://img1.imgtn.bdimg.com/it/u=3198762613,766144830&fm=27&gp=0.jpg",
+            "name": "daimuyang123",
+            "ways": "通过weixin登录",
+            "target": "2017好好奋斗，加油",
+            "setting": {
+                "badge": 5
+            },
+            "nowLearnClass": [
+                {
+                    "id": 18001,"progress": 5
+                },
+                {   "id": 18003,"progress": 0
+                },
+                {   "id": 18005,"progress": 34
+                },
+                {   "id": 18006,"progress": 100
+                }
+            ]
+        }
+    ]
+}
