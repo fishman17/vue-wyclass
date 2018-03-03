@@ -14,92 +14,17 @@
 </template>
 
 <script>
+import {getExpert} from '@/api/api'
 export default {
   data(){
     return{
-      experts:[
-        {
-          name: 'expert1',
-          describe: 'something that he have done',
-          imgSrc:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1903935979,3194866924&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert2',
-          describe: 'something that he have done',
-          imgSrc:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1903935979,3194866924&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert3',
-          describe: 'something that he have done',
-          imgSrc:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert4',
-          describe: 'something that he have done',
-          imgSrc:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert5',
-          describe: 'something that he have done',
-          imgSrc:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert6',
-          describe: 'something that he have done',
-          imgSrc:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert7',
-          describe: 'something that he have done',
-          imgSrc:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert8',
-          describe: 'something that he have done',
-          imgSrc:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert9',
-          describe: 'something that he have done',
-          imgSrc:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-        {
-          name: 'expert10',
-          describe: 'something that he have done',
-          imgSrc:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1903935979,3194866924&fm=27&gp=0.jpg',
-          courseNumber: 19,
-          studentNumber: 189720,
-          recommendCourse: '序列模型',
-        },
-      ]
+      experts:[]
     }
+  },
+  mounted(){
+    getExpert().then(res=>{
+      this.experts= res.experts;
+    })
   }
 }
 </script>

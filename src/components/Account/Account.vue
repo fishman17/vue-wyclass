@@ -62,9 +62,13 @@
       <li class="nav-item" @click="changeToSetting">
          <mt-cell title="设置" icon="more" is-link>
            <i slot="icon" class="icon iconfont icon-shezhi" ></i>
-           <mt-badge size="small" v-if="user.setting.badge">{{user.setting.badge}}</mt-badge>
+           <!-- <mt-badge size="small" v-if="user.setting.badge">{{user.setting.badge}}</mt-badge> -->
+          
          </mt-cell>
+          <!-- {{user.setting.badge}} -->
+          
       </li>
+      <!-- <span>{{user.setting.badge}}</span> -->
     </ul>
     <ul class="nav">
       <li class="nav-item">
@@ -104,7 +108,11 @@ export default {
   },
   methods:{
     changeToSetting(){
-      this.$router.push('/account/setting');
+      if(this.user.name){
+        this.$router.push('/account/setting');
+      }else{
+        this.$router.push('/account/login');
+      }
     },
     changeToLogin(){
       this.$router.push('/account/login');

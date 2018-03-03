@@ -13,6 +13,7 @@ const portfinder = require('portfinder')
 const appData = require('../data.json')
 const userList = appData.userList
 
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 const bodyParser = require('body-parser');  //express 解析body
@@ -49,6 +50,21 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         }
           
 
+      });
+      app.get('/api/getrecommend', function (req, res) {
+        res.json(appData.home[0])
+      });
+      app.get('/api/getclassic', function (req, res) {
+        res.json(appData.home[1])
+      });
+      app.get('/api/getmajor', function (req, res) {
+        res.json(appData.home[2])
+      });
+      app.get('/api/getexpert', function (req, res) {
+        res.json(appData.home[3])
+      });
+      app.get('/api/getclassify', function (req, res) {
+        res.json(appData.classes)
       });
       app.get('/api/goods', function (req, res) {
         // res.json({

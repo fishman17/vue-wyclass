@@ -12,13 +12,20 @@
             },
             "nowLearnClass": [
                 {
-                    "id": 18001,"progress": 5
+                    "id": 18001,
+                    "progress": 5
                 },
-                {   "id": 18003,"progress": 0
+                {
+                    "id": 18003,
+                    "progress": 0
                 },
-                {   "id": 18005,"progress": 34
+                {
+                    "id": 18005,
+                    "progress": 34
                 },
-                {   "id": 18006,"progress": 100
+                {
+                    "id": 18006,
+                    "progress": 100
                 }
             ]
         },
@@ -34,15 +41,693 @@
             },
             "nowLearnClass": [
                 {
-                    "id": 18001,"progress": 5
+                    "id": 18001,
+                    "progress": 5
                 },
-                {   "id": 18003,"progress": 0
+                {
+                    "id": 18003,
+                    "progress": 0
                 },
-                {   "id": 18005,"progress": 34
+                {
+                    "id": 18005,
+                    "progress": 34
                 },
-                {   "id": 18006,"progress": 100
+                {
+                    "id": 18006,
+                    "progress": 100
                 }
             ]
         }
-    ]
+    ],
+    "home": [
+        {
+            "swiperCourse": [
+                {
+                    "title": "假期攻略:放假提升能力8堂必修课",
+                    "imgSrc": "http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                },
+                {
+                    "title": "222222222",
+                    "imgSrc": "http://edu-image.nosdn.127.net/4fef8668-4a30-4764-bb9a-9659b7c581b5.jpg?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                },
+                {
+                    "title": "3333333",
+                    "imgSrc": "http://edu-image.nosdn.127.net/673f3689-7bed-4ba4-8c55-664f98ab92ad.jpg?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                },
+                {
+                    "title": "4444444",
+                    "imgSrc": "http://edu-image.nosdn.127.net/5639de2d-bc47-43bb-a3f1-49bd2c474928.png?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                }
+            ],
+            "popular": {
+                "title": "热门新知",
+                "feed": [
+                    ""
+                ]
+            },
+            "types": [
+                {
+                    "title": "编辑精选",
+                    "head": "探索人工智能奥秘",
+                    "courses": [
+                        {
+                            "title": "我们管他叫人工智能课程1",
+                            "imgSrc": "http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "mainMessage": "由浅入深的讲解Excel Power Pivot的基础知识，以及从数据获取、分析到展现的全过程，通过学习本课程，可以快速的通过Excel Power Pivot进行数据建模分析，作出让老板眼前一亮的企业级分析报告。",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "我们管他叫课程2",
+                            "imgSrc": "http://edu-image.nosdn.127.net/4fef8668-4a30-4764-bb9a-9659b7c581b5.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "mainMessage": "222由浅入深的讲解Excel Power Pivot的基础知识，以及从数据获取、分析到展现的全过程，通过学习本课程，可以快速的通过Excel Power Pivot进行数据建模分析，作出让老板眼前一亮的企业级分析报告。",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "我们管他叫人工智能课程3",
+                            "imgSrc": "http://edu-image.nosdn.127.net/673f3689-7bed-4ba4-8c55-664f98ab92ad.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "mainMessage": "333由浅入深的讲解Excel Power Pivot的基础知识，以及从数据获取、分析到展现的全过程，通过学习本课程，可以快速的通过Excel Power Pivot进行数据建模分析，作出让老板眼前一亮的企业级分析报告。",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "我们管他叫人工智能课程4",
+                            "imgSrc": "http://edu-image.nosdn.127.net/5639de2d-bc47-43bb-a3f1-49bd2c474928.png?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "mainMessage": "444由浅入深的讲解Excel Power Pivot的基础知识，以及从数据获取、分析到展现的全过程，通过学习本课程，可以快速的通过Excel Power Pivot进行数据建模分析，作出让老板眼前一亮的企业级分析报告。",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "时间管理",
+                    "head": "探索时间的奥秘",
+                    "courses": [
+                        {
+                            "title": "我们管他叫时间管理课程1",
+                            "imgSrc": "http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "mainMessage": "PPT在线课程三冠王，王牌首选爆款课程，畅销四年遥遥领先，超6万人学习好评如潮！、课程不限时间和次数~",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "我们管他叫时间管理课程2",
+                            "imgSrc": "http://edu-image.nosdn.127.net/4fef8668-4a30-4764-bb9a-9659b7c581b5.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "mainMessage": "222222222222PPT在线课程三冠王，王牌首选爆款课程，畅销四年遥遥领先，超6万人学习好评如潮！、课程不限时间和次数~",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "我们管他叫时间管理课程3",
+                            "imgSrc": "http://edu-image.nosdn.127.net/673f3689-7bed-4ba4-8c55-664f98ab92ad.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "mainMessage": "333333333PPT在线课程三冠王，王牌首选爆款课程，畅销四年遥遥领先，超6万人学习好评如潮！、课程不限时间和次数~",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "swiperCourse": [
+                {
+                    "title": "假期攻略:放假提升能力8堂必修课",
+                    "imgSrc": "http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                },
+                {
+                    "title": "222222222",
+                    "imgSrc": "http://edu-image.nosdn.127.net/4fef8668-4a30-4764-bb9a-9659b7c581b5.jpg?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                },
+                {
+                    "title": "3333333",
+                    "imgSrc": "http://edu-image.nosdn.127.net/673f3689-7bed-4ba4-8c55-664f98ab92ad.jpg?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                },
+                {
+                    "title": "4444444",
+                    "imgSrc": "http://edu-image.nosdn.127.net/5639de2d-bc47-43bb-a3f1-49bd2c474928.png?imageView&thumbnail=960y440&quality=100",
+                    "starLevel": 4.6,
+                    "learnNumber": 468,
+                    "newPrice": "16.90",
+                    "oldPrice": "69.00",
+                    "introduce": {
+                        "courseIntroduce": "这是一堂厉害的课",
+                        "fitPeople": "摄影爱好者",
+                        "provider": {
+                            "imgSrc": "",
+                            "name": "视觉摄影FUN及后期课堂",
+                            "introduce": "是一个工作室"
+                        },
+                        "teacher": {
+                            "imgSrc": "",
+                            "name": "雷波",
+                            "introduce": "是一个老师"
+                        }
+                    }
+                }
+            ],
+            "series": [],
+            "courses": [
+                {
+                    "head": "精选好课",
+                    "data": [
+                        {
+                            "title": "假期攻略:放假提升能力8堂必修课",
+                            "imgSrc": "http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "呃呃呃呃呃呃呃嗯嗯嗯嗯嗯呃呃呃呃呃呃呃呃呃呃呃鹅鹅鹅鹅鹅鹅饿",
+                            "imgSrc": "http://edu-image.nosdn.127.net/4fef8668-4a30-4764-bb9a-9659b7c581b5.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "3333333",
+                            "imgSrc": "http://edu-image.nosdn.127.net/673f3689-7bed-4ba4-8c55-664f98ab92ad.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "4444444",
+                            "imgSrc": "http://edu-image.nosdn.127.net/5639de2d-bc47-43bb-a3f1-49bd2c474928.png?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "head": "免费好课",
+                    "data": [
+                        {
+                            "title": "假期攻略:放假提升能力8堂必修课",
+                            "imgSrc": "http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃鹅鹅鹅鹅鹅鹅饿",
+                            "imgSrc": "http://edu-image.nosdn.127.net/4fef8668-4a30-4764-bb9a-9659b7c581b5.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "3333333",
+                            "imgSrc": "http://edu-image.nosdn.127.net/673f3689-7bed-4ba4-8c55-664f98ab92ad.jpg?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        },
+                        {
+                            "title": "4444444",
+                            "imgSrc": "http://edu-image.nosdn.127.net/5639de2d-bc47-43bb-a3f1-49bd2c474928.png?imageView&thumbnail=960y440&quality=100",
+                            "starLevel": 4.6,
+                            "learnNumber": 468,
+                            "newPrice": "16.90",
+                            "oldPrice": "69.00",
+                            "introduce": {
+                                "courseIntroduce": "这是一堂厉害的课",
+                                "fitPeople": "摄影爱好者",
+                                "provider": {
+                                    "imgSrc": "",
+                                    "name": "视觉摄影FUN及后期课堂",
+                                    "introduce": "是一个工作室"
+                                },
+                                "teacher": {
+                                    "imgSrc": "",
+                                    "name": "雷波",
+                                    "introduce": "是一个老师"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "majors": [
+                {
+                    "title": "互联网项目管理",
+                    "imgSrc": "http://edu-image.nosdn.127.net/51CA69A972018C5E58C43B4168024BB5.jpg",
+                    "message": "三节课联合网易共同打造，带你系统掌握 网易 & BAT 内部产品经理在设计产品过程中的工作技能、方法、流程！通过高强度训练，帮你掌握产品经理必备核心技能！"
+                },
+                {
+                    "title": "初级UI设计师",
+                    "imgSrc": "http://edu-image.nosdn.127.net/8D7A4CD2B783EBC244D9F6FDE6543BFB.png?imageView&thumbnail=470y184&quality=100",
+                    "message": "三节课联合网易共同打造，带你系统掌握 网易 & BAT 内部产品经理在设计产品过程中的工作技能、方法、流程！通过高强度训练，帮你掌握产品经理必备核心技能！"
+                },
+                {
+                    "title": "高级UI设计师",
+                    "imgSrc": "http://edu-image.nosdn.127.net/FC783BBB34B5B7CD0AAF2160CB05EC35.jpg?imageView&thumbnail=470y184&quality=100",
+                    "message": "三节课联合网易共同打造，带你系统掌握 网易 & BAT 内部产品经理在设计产品过程中的工作技能、方法、流程！通过高强度训练，帮你掌握产品经理必备核心技能！"
+                },
+                {
+                    "title": "产品经理",
+                    "imgSrc": "http://edu-image.nosdn.127.net/94821B045079F13CFE22BC4E9699E88B.jpg?imageView&thumbnail=470y184&quality=100",
+                    "message": "三节课联合网易共同打造，带你系统掌握 网易 & BAT 内部产品经理在设计产品过程中的工作技能、方法、流程！通过高强度训练，帮你掌握产品经理必备核心技能！"
+                },
+                {
+                    "title": "产品运营",
+                    "imgSrc": "http://nos.netease.com/edu-image/1F301F2A80E190306025D2F8CA7C4FF6.jpg?imageView&thumbnail=470y184&quality=100",
+                    "message": "三节课联合网易共同打造，带你系统掌握 网易 & BAT 内部产品经理在设计产品过程中的工作技能、方法、流程！通过高强度训练，帮你掌握产品经理必备核心技能！"
+                },
+                {
+                    "title": "全栈新媒体运营",
+                    "imgSrc": "http://edu-image.nosdn.127.net/9AEAE3BF26DEE81105B54354B385B0D9.jpg",
+                    "message": "三节课联合网易共同打造，带你系统掌握 网易 & BAT 内部产品经理在设计产品过程中的工作技能、方法、流程！通过高强度训练，帮你掌握产品经理必备核心技能！"
+                }
+            ]
+        },
+        {
+            "experts": [
+                {
+                    "name": "expert1",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1903935979,3194866924&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert2",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1903935979,3194866924&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert3",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert4",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert5",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert6",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert7",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert8",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert9",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2416317344,3243643264&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                },
+                {
+                    "name": "expert10",
+                    "describe": "something that he have done",
+                    "imgSrc": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1903935979,3194866924&fm=27&gp=0.jpg",
+                    "courseNumber": 19,
+                    "studentNumber": 189720,
+                    "recommendCourse": "序列模型"
+                }
+            ]
+        }
+    ],
+    "classes":[{"isClick":true,"title":"特别推荐","class":[{"head":"a","detail":[1,2,3,4]},{"head":"b","detail":[2,3,4,4]}]},{"title":"办公效率","img":["http://edu-image.nosdn.127.net/71a2a731-18af-4436-af50-78efed74a123.jpg?imageView&quality=100","http://edu-image.nosdn.127.net/7b80411c-136c-4aad-8c98-caa2d6ae73ff.jpg?imageView&quality=100"],"class":[{"head":"办公软件","detail":["PPT","Excel","Word","Project","Keynote","Outlook","更多软件"]},{"head":"工作效率","detail":["时间管理","思维导图"]},{"head":"电脑基础","detail":["基础操作","常用工具"]}]},{"title":"职业发展","class":[{"head":"a","detail":[1,2,3,4]},{"head":"b","detail":[2,3,4,4]}]},{"title":"编程开发","class":[{"head":"a","detail":[1,2,3,4]},{"head":"b","detail":[2,3,4,4]}]},{"title":"产品和设计","class":[{"head":"a","detail":[1,2,3,4]},{"head":"b","detail":[2,3,4,4]}]},{"title":"生活方式","class":[{"head":"a","detail":[1,2,3,4]},{"head":"b","detail":[2,3,4,4]}]},{"title":"亲子教育","class":[{"head":"a","detail":[1,2,3,4]},{"head":"b","detail":[2,3,4,4]}]},{"title":"语言学习","class":[{"head":"a","detail":[1,2,3,4]},{"head":"b","detail":[2,3,4,4]}]}]
 }
