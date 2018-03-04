@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in recommend.swiperCourse" :key="item.id" class="item">
-        <img :src="item.imgSrc" alt="" class="image">
+      <mt-swipe-item v-for="item in recommend.swiperCourse" :key="item.id" class="item" >
+        <img :src="item.imgSrc" alt="" class="image" @click="changeToCoursedetails(item)">
       </mt-swipe-item>
     </mt-swipe>
     <div class="popular">
@@ -13,7 +13,7 @@
       <ul v-for="types in recommend.types" :key="types.id">
         <span class="title">{{types.title}}</span>
         <span class="head">{{types.head}}</span>
-        <li v-for="course in types.courses" :key="course.id" class="course">
+        <li v-for="course in types.courses" :key="course.id" class="course" @click="changeToCoursedetails(course)">
           <div class="course-image">
             <img :src="course.imgSrc" alt="">
           </div>
@@ -47,6 +47,11 @@ export default {
     getRecommend().then(res=>{
       this.recommend= res;
     })
+  },
+  methods:{
+    changeToCoursedetails(course){
+      this.$router.push({path:"/home/coursedetails" , query:{id:course.id}})
+    },
   }
 }
 </script>

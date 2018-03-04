@@ -25,7 +25,8 @@ export default {
     getExpert().then(res=>{
       this.experts= res.experts;
     })
-  }
+  },
+
 }
 </script>
 

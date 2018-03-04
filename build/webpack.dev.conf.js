@@ -48,24 +48,48 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             "notFound"
           );
         }
-          
-
       });
+
+
+      app.post('/api/findcoursebyid', function (req, res) {
+        for(let index in appData.allclass){
+          if(appData.allclass[index].id == req.body.id ){
+            res.json(appData.allclass[index]);
+            return;
+          }
+        }
+      });
+
+
       app.get('/api/getrecommend', function (req, res) {
         res.json(appData.home[0])
       });
+
+
       app.get('/api/getclassic', function (req, res) {
         res.json(appData.home[1])
       });
+
+
       app.get('/api/getmajor', function (req, res) {
         res.json(appData.home[2])
       });
+
+
       app.get('/api/getexpert', function (req, res) {
         res.json(appData.home[3])
       });
+
+
       app.get('/api/getclassify', function (req, res) {
         res.json(appData.classes)
       });
+
+
+      app.get('/api/getallclass', function (req, res) {
+        res.json(appData.allclass)
+      });
+
       app.get('/api/goods', function (req, res) {
         // res.json({
         //   errno: 0,

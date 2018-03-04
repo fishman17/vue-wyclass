@@ -4,10 +4,9 @@ const state = {
     // 用户登录状态
     loginStatus: JSON.parse(sessionStorage.getItem('loginStatus')) || false,
     // 用户登录信息
-    // userInfo: JSON.parse(sessionStorage.getItem('userInfo')) || {},
-    userInfo: {},
+    userInfo: JSON.parse(sessionStorage.getItem('userInfo')) || {},
     // 用户数据信息
-    userData: {}
+    userData: JSON.parse(sessionStorage.getItem('userData')) || {},
 }
 
 const actions = {
@@ -27,6 +26,7 @@ const actions = {
     setSignOut({ commit }) {
         sessionStorage.removeItem('loginStatus')
         sessionStorage.removeItem('userInfo')
+        sessionStorage.removeItem('userData')
         commit(types.SET_LOGIN_STATUS, false)
         commit(types.SET_USER_INFO, {})
         commit(types.SET_USER_DATA, {})
@@ -36,6 +36,7 @@ const actions = {
      * 设置用户信息
      */
     setUserData({ commit },res) {
+        sessionStorage.setItem('userData', JSON.stringify(res))
         commit(types.COM_LOADING_STATUS, false)
         commit(types.SET_USER_DATA, res)
     }

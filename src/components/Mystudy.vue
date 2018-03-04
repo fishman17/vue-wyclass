@@ -37,29 +37,30 @@
 
 <script>
 import {mapGetters} from 'vuex'
+import { getAllclass } from "@/api/api";
 export default {
   data(){
     return{
       classList : [],
-      allClass : [
-        {id:18001,title:'C/C++',imgSrc:"http://img-ph-mirror.nosdn.127.net/nShw94SiVxzgQevSJqNElg==/6631798940933044057.png?imageView&thumbnail=223y124&quality=100"},
-        {id:18002,title:'深度学习入门系列',imgSrc:"http://edu-image.nosdn.127.net/17ACCC2458A3B49A763E10FB9D133A4A.jpg?imageView&thumbnail=223y124&quality=100"},
-        {id:18003,title:'JS游戏--别踩白块',imgSrc:"http://img-ph-mirror.nosdn.127.net/hh5kcySxlbimS4ZGB5jdsA==/3196429835626448852.png?imageView&thumbnail=223y124&quality=100"},
-        {id:18004,title:'跟郝敏老师学声乐唱歌技巧',imgSrc:"http://img-ph-mirror.nosdn.127.net/9qAwvh_VGX8h0W3x-VmGRA==/6597390824054084846.jpg?imageView&thumbnail=223y124&quality=100"},
-        {id:18005,title:'Git实用教程',imgSrc:"http://img-ph-mirror.nosdn.127.net/8ObC7AzOsOVAR8ph-6-MJw==/6631564744955406715.png?imageView&thumbnail=223y124&quality=100"},
-        {id:18006,title:'高效阅读：如何投资你的碎片化时间',imgSrc:"http://edu-image.nosdn.127.net/8F0FC44AFD2BB8874A3150254198FC91.png?imageView&thumbnail=450y250&quality=100"},
-      ],
+      allClass : [],
     }
   },
   computed:{
     ...mapGetters({
         user: 'getUserData'
-    })
+    }),
+    // classList(){
+      
+    // }
   },
   mounted(){
-    // this.user.nowLearnClass.map((item)=>{
-    //   this.checkList(item);
-    //   });
+    getAllclass().then((res)=>{
+      this.allClass = res;
+      for(let index in this.user.nowLearnClass){    //获取到allclass信息后 查询当前用户现学课程
+      this.checkList(this.user.nowLearnClass[index]);
+      }
+    });
+    
   },
   methods:{
     checkList(item){    //通过user中的所学课程id从所有课程中寻找详细课程信息
@@ -71,6 +72,7 @@ export default {
       }
     },
     changeToDetail(classes){
+      this.$router.push({path:"/home/coursedetails" , query:{id:classes.id}})
     },
     changeToLogin(){
       this.$router.push('/account/login');

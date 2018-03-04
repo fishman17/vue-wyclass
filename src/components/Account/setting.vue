@@ -37,7 +37,7 @@
               <div class="tail">&gt;</div>
           </li>
           <li class="setting">
-              <button @click="signOut">点此退出登录哦</button>
+              <button @click="signOut">点此退出登录</button>
           </li>
       </ul>
   </div>
@@ -75,69 +75,52 @@ export default {
 <style lang="stylus" scoped>
 @import '../../common/stylus/mixin';
 
-.wrapper {
-    .title {
-        height: 1.2rem;
-        background-color: #f7f9fc;
-        line-height: 1.2rem;
-
-        .back {
-            font-size: 0.8rem;
-            margin-left: 0.3rem;
-        }
-
-        .head {
-            font-size: 0.6rem;
-            position: absolute;
-            left: 45%;
-        }
-    }
-
-    .settings {
-        margin: 0;
-        padding: 0;
-
-        .setting {
-            list-style-type: none;
-            width: 9.7rem;
-            height: 1.4rem;
-            margin-left: 0.3rem;
-            text-align: left;
-            line-height: 1.4rem;
-            color: #666666;
-            border-1px(rgba(7, 17, 27, 0.1));
-
-            .head {
-                font-size: 0.4rem;
-                display: inline-block;
-            }
-
-            .tail {
-                float: right;
-                height: 0.8rem;
-                display: inline-block;
-                margin-top: 0.2rem;
-                margin-right: 0.3rem;
-                line-height: 1rem;
-                font-size: 0.35rem;
-                text-align: right;
-
+.wrapper 
+    .title 
+        height: 1.2rem
+        background-color: #f7f9fc
+        line-height: 1.2rem
+        .back
+            font-size: 0.8rem
+            margin-left: 0.3rem
+        .head
+            font-size: 0.6rem
+            position: absolute
+            left: 45%
+    .settings 
+        margin: 0
+        padding: 0
+        .setting
+            list-style-type: none
+            width: 9.7rem
+            height: 1.4rem
+            margin-left: 0.3rem
+            text-align: left
+            line-height: 1.4rem
+            color: #666666
+            border-1px(rgba(7, 17, 27, 0.1))
+            .head
+                font-size: 0.4rem
+                display: inline-block
+            .tail
+                float: right
+                height: 0.8rem
+                display: inline-block
+                margin-top: 0.2rem
+                margin-right: 0.3rem
+                line-height: 1rem
+                font-size: 0.35rem
+                text-align: right
                 // background-color red
-                .mint-switch {
-                    display: inline-block;
-                    margin-right: -0.3rem;
-
-                    .mint-switch-core {
+                .mint-switch 
+                    display: inline-block
+                    margin-right: -0.3rem
+                    .mint-switch-core
                         border-color: #2cc17b;
-                        background-color: #2cc17b;
-                    }
-                }
-
-                .active {
-                    color: #26a2ff;
-                }
-            }
-        }
-    }
-}
+                        background-color: #2cc17b
+                .active
+                    color: #26a2ff
+            button 
+              width 6.7rem
+              margin-left 1.5rem
 </style>

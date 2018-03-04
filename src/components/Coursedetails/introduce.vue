@@ -5,7 +5,7 @@
       <span>{{course.learnNumber}}人在学</span>
       <p>￥{{course.newPrice}}</p>
     </div>
-    <div class="main-message">
+    <div class="main-message" v-if="course.introduce">
       <h3>课程介绍</h3>
       <span>{{course.introduce.courseIntroduce}}</span>
       <h3>适用人群</h3>

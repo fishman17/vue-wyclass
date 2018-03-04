@@ -38,6 +38,7 @@
 import catalog from '@/components/Coursedetails/catalog'
 import comment from '@/components/Coursedetails/comment'
 import introduce from '@/components/Coursedetails/introduce'
+import {findCourseById} from '@/api/api'
 export default {
     components:{
         catalog,
@@ -47,26 +48,26 @@ export default {
     data(){
         return{
             course:{
-                    title:'假期攻略:放假提升能力8堂必修课',
-                    imgSrc:'http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100',
-                    starLevel: 4.6,
-                    learnNumber: 468,
-                    newPrice:'16.90',
-                    oldPrice:'69.00',
-                    introduce:{
-                      courseIntroduce:'这是一堂厉害的课',
-                      fitPeople: '摄影爱好者',
-                      provider: {
-                        imgSrc:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2821683830,3552358787&fm=27&gp=0.jpg',
-                        name:'视觉摄影FUN及后期课堂',
-                        introduce: '是一个工作室',
-                      },
-                      teacher:{
-                        imgSrc: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1716543176,2846776791&fm=27&gp=0.jpg',
-                        name: '雷波',
-                        introduce:'是一个老师',
-                      }
-                    },
+                    // title:'假期攻略:放假提升能力8堂必修课',
+                    // imgSrc:'http://edu-image.nosdn.127.net/1c6b772a-9d4a-4356-90d0-66f6e364d852.jpg?imageView&thumbnail=960y440&quality=100',
+                    // starLevel: 4.6,
+                    // learnNumber: 468,
+                    // newPrice:'16.90',
+                    // oldPrice:'69.00',
+                    // introduce:{
+                    //   courseIntroduce:'这是一堂厉害的课',
+                    //   fitPeople: '摄影爱好者',
+                    //   provider: {
+                    //     imgSrc:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2821683830,3552358787&fm=27&gp=0.jpg',
+                    //     name:'视觉摄影FUN及后期课堂',
+                    //     introduce: '是一个工作室',
+                    //   },
+                    //   teacher:{
+                    //     imgSrc: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1716543176,2846776791&fm=27&gp=0.jpg',
+                    //     name: '雷波',
+                    //     introduce:'是一个老师',
+                    //   }
+                    // },
                   },
             selected: '1',
             isWantLearn: true,   //想学icon红心是否点亮，依赖于用户我的收藏中是否存在当前课程
@@ -79,6 +80,12 @@ export default {
         wantLearn(){
             this.isWantLearn = !this.isWantLearn;
         }
+    },
+    mounted(){
+      findCourseById({id:this.$route.query.id}).then((res)=>{
+        // console.log(res+"ggg");
+        this.course = res;
+      })
     }
 }
 </script>
@@ -104,7 +111,7 @@ export default {
   .main-image
     margin-top 1.2rem
     width 10rem
-    height 4rem
+    height 5.5rem
   .fixed
     position fixed 
     bottom 0

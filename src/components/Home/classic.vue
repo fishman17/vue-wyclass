@@ -1,14 +1,14 @@
 <template>
   <div class="wrapper">
     <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in classic.swiperCourse" :key="item.id" class="item">
-        <img :src="item.imgSrc" alt="" class="image">
+      <mt-swipe-item v-for="item in classic.swiperCourse" :key="item.id" class="item" > 
+        <img :src="item.imgSrc" alt="" class="image" @click="changeToCoursedetails(item)">
       </mt-swipe-item>
     </mt-swipe>
     <div class="courses">
       <ul class="recommend" v-for="types in classic.courses" :key="types.id">
         <span class="head">{{types.head}}</span>
-        <li v-for="course in types.data" :key="course.id" class="course-detail" @click="changeToCoursedetails">
+        <li v-for="course in types.data" :key="course.id" class="course-detail" @click="changeToCoursedetails(course)">
           <img :src="course.imgSrc" alt="">
           <span class="title">{{course.title}}</span>
           <div class="relevent">
@@ -38,8 +38,10 @@ export default {
     star,
   },
   methods:{
-    changeToCoursedetails(){
-      this.$router.push('/home/coursedetails');
+    changeToCoursedetails(course){
+      console.log(111)
+      this.$router.push({path:"/home/coursedetails" , query:{id:course.id}})
+      // this.$router.push({name:"Coursedetails" , params:{id:course.id}})
     },
   },
   mounted(){

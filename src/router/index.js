@@ -37,7 +37,7 @@ export default new Router({
       path: '/account',
       name: 'Account',
       component: Account,
-    },
+    },  
     {
       path: '/mystudy',
       name: 'Mystudy',
