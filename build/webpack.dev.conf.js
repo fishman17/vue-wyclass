@@ -34,20 +34,22 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         let userData = req.body;
         let isExist = false;
         // console.log(user);
-        userList.map((user) =>{
-          if(user.username == userData.username && user.password == userData.password){
-            res.json({
-              ...user
-            });
-            isExist = true;
-            return;
+        setTimeout(() => {
+          userList.map((user) =>{
+            if(user.username == userData.username && user.password == userData.password){
+              res.json({
+                ...user
+              });
+              isExist = true;
+              return;
+            }
+          })
+          if(!isExist){
+            res.json(
+              "notFound"
+            );
           }
-        })
-        if(!isExist){
-          res.json(
-            "notFound"
-          );
-        }
+        }, 1000);    //假装加载了一下子（体现COM_LOADNG_STATE）
       });
 
 
