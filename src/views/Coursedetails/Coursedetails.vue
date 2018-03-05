@@ -26,7 +26,7 @@
             <i class="icon iconfont icon-xiangqu" :class="isWantLearn? 'active':''"></i>
             <span>想学</span>
         </div>
-        <div class="addtostudy">
+        <div class="addtostudy" @click="addUserCourse(course)">
             <i class="icon iconfont icon-jia"></i>
             <span>加入学习</span>
         </div>
@@ -35,38 +35,65 @@
 </template>
 
 <script>
-import catalog from '@/views/Coursedetails/catalog'
-import comment from '@/views/Coursedetails/comment'
-import introduce from '@/views/Coursedetails/introduce'
-import {findCourseById} from '@/api/api'
+import catalog from "@/views/Coursedetails/catalog";
+import comment from "@/views/Coursedetails/comment";
+import introduce from "@/views/Coursedetails/introduce";
+import { findCourseById } from "@/api/api";
+import { mapActions, mapGetters } from "vuex";
+import { MessageBox } from "mint-ui";
 export default {
-    components:{
-        catalog,
-        comment,
-        introduce,
+  components: {
+    catalog,
+    comment,
+    introduce
+  },
+  data() {
+    return {
+      course: {},
+      selected: "1",
+      isWantLearn: true //想学icon红心是否点亮，依赖于用户我的收藏中是否存在当前课程
+    };
+  },
+  computed: {
+    ...mapGetters({
+      userData: "getUserData"
+    })
+  },
+  methods: {
+    back() {
+      this.$router.go("-1");
     },
-    data(){
-        return{
-            course:{},
-            selected: '1',
-            isWantLearn: true,   //想学icon红心是否点亮，依赖于用户我的收藏中是否存在当前课程
+    wantLearn() {
+      this.isWantLearn = !this.isWantLearn;
+    },
+    ...mapActions(["addUserClass"]),
+    addUserCourse(course) {
+      if (this.userData.name) {
+        if (!this.checkIsExist(course)) {
+          //如果我的课程尚未存在
+          this.addUserClass({ id: course.id, progress: 0 });
+          MessageBox("提示", "添加学习成功！");
+        } else {
+          MessageBox("提示", "课程已经存在！");
         }
+      }else{
+        this.$router.push('/account/login');
+      }
     },
-    methods:{
-        back(){
-            this.$router.go('-1');
-        },
-        wantLearn(){
-            this.isWantLearn = !this.isWantLearn;
-        }
-    },
-    mounted(){
-      findCourseById({id:this.$route.query.id}).then((res)=>{
-        // console.log(res+"ggg");
-        this.course = res;
-      })
+    checkIsExist(course) {
+      for (let item of this.userData.nowLearnClass) {
+        if (item.id == course.id) return true;
+      }
+      return false;
     }
-}
+  },
+  mounted() {
+    findCourseById({ id: this.$route.query.id }).then(res => {
+      // console.log(res+"ggg");
+      this.course = res;
+    });
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -92,7 +119,7 @@ export default {
     width 10rem
     height 5.5rem
   .fixed
-    position fixed 
+    position fixed
     bottom 0
     left 0
     right 0

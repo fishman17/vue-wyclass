@@ -39,7 +39,14 @@ const actions = {
         sessionStorage.setItem('userData', JSON.stringify(res))
         commit(types.COM_LOADING_STATUS, false)
         commit(types.SET_USER_DATA, res)
-    }
+    },
+
+    /**
+     * 添加用户课程
+    */
+    addUserClass({ commit },res) {
+        commit(types.ADD_USER_CLASS, res)
+    },
 }
 
 const getters = {
@@ -59,7 +66,11 @@ const mutations = {
 
     [types.SET_USER_DATA](state, res) {
         state.userData = res
-    }
+    },
+
+    [types.ADD_USER_CLASS](state, res) {
+        state.userData.nowLearnClass.push(res);
+    },
     
 }
 

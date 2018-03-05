@@ -39,7 +39,6 @@ export default {
   },
   methods:{
     changeToCoursedetails(course){
-      console.log(111)
       this.$router.push({path:"/home/coursedetails" , query:{id:course.id}})
       // this.$router.push({name:"Coursedetails" , params:{id:course.id}})
     },
