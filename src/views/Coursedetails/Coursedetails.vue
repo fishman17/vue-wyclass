@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import catalog from '@/components/Coursedetails/catalog'
-import comment from '@/components/Coursedetails/comment'
-import introduce from '@/components/Coursedetails/introduce'
+import catalog from '@/views/Coursedetails/catalog'
+import comment from '@/views/Coursedetails/comment'
+import introduce from '@/views/Coursedetails/introduce'
 import {findCourseById} from '@/api/api'
 export default {
     components:{

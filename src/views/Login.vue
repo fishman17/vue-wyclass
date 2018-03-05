@@ -23,6 +23,7 @@
 <script>
 import { requestLogin } from "../api/api";
 import { mapActions } from "vuex";
+import { Toast } from 'mint-ui';
 export default {
   data() {
     return {
@@ -55,13 +56,16 @@ export default {
 
       requestLogin(data).then(res => {
         if(res == "notFound"){
-            console.log(res);
+            Toast({
+                message: '登陆失败',
+                iconClass: 'icon icon-error'
+                });
+            this.$store.dispatch("setLoadingState", false);
         }else{
             this.setUserInfo(data);
             this.setUserData(res);
             this.$router.replace("/home");
         }
-        
       });
     }
   }

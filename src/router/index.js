@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home/Home'
-import Account from '@/components/Account/Account'
-import Mystudy from '@/components/Mystudy'
-import classify from '@/components/Classify'
-import Coursedetails from '@/components/Coursedetails/Coursedetails'
-import Classifydetails from '@/components/Classifydetails' 
-import Login from '@/components/Login'
-import search from '@/components/search' 
-import NotFound from '@/components/NotFound'
-import setting from '@/components/Account/setting'
+// import Home from '@/views/Home/Home'
+// import Account from '@/views/Account/Account'
+// import Mystudy from '@/views/Mystudy'
+// import classify from '@/views/Classify'
+// import Coursedetails from '@/views/Coursedetails/Coursedetails'
+// import Classifydetails from '@/views/Classifydetails' 
+// import Login from '@/views/Login'
+// import search from '@/components/search' 
+// import NotFound from '@/components/NotFound'
+// import setting from '@/views/Account/setting'
 Vue.use(Router)
 
 export default new Router({
@@ -21,7 +21,7 @@ export default new Router({
     {
       path: '/home',
       name: 'Home',
-      component: Home,
+      component: resolve => require(['@/views/Home/Home'], resolve),
       // children:[
       //   {
       //     path: '',
@@ -36,22 +36,22 @@ export default new Router({
     {
       path: '/account',
       name: 'Account',
-      component: Account,
+      component: resolve => require(['@/views/Account/Account'], resolve),
     },  
     {
       path: '/mystudy',
       name: 'Mystudy',
-      component: Mystudy
+      component: resolve => require(['@/views/Mystudy'], resolve),
     },
     {
       path: '/classify',
       name: 'Classify',
-      component: classify
+      component: resolve => require(['@/views/Classify'], resolve),
     },
     {
       path: '/home/coursedetails',
       name: 'Coursedetails',
-      component: Coursedetails,
+      component: resolve => require(['@/views/Coursedetails/Coursedetails'], resolve),
       // children:[
       //   {
       //     path: '',
@@ -65,28 +65,29 @@ export default new Router({
     {
       path: '/classifydetails',
       name: 'Classifydetails',
-      component: Classifydetails,
+      component: resolve => require(['@/views/Classifydetails'], resolve),
       children:[
       ]
     },
     {
       path: '/home/search',
       name: 'search',
-      component: search,
+      component: resolve => require(['@/components/search'], resolve),
+      
     },
     {
       path: '/account/login',
       name: 'login',
-      component: Login,
+      component: resolve => require(['@/views/Login'], resolve),
     },
     {
       path:'/account/setting',
-      component:setting
+      component: resolve => require(['@/views/Account/setting'], resolve),
     },
     {
       path: '*',
       name: 'notfound',
-      component: NotFound
+      component: resolve => require(['@/components/NotFound'], resolve),
     },
 
   ]

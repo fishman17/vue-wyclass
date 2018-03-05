@@ -6,7 +6,6 @@
         <div class="loadings__loader__dot"></div>
         <div class="loadings__loader__dot"></div>
         <div class="loadings__loader__dot"></div>
-        <div class="loadings__loader__dot"></div>
       </div>
     </div>
   </transition>
@@ -78,8 +77,8 @@
       transform translate3d(-50%,-50%,0)
 
       &__dot {
-        width 40px
-        height 40px
+        width 30px
+        height 30px
         background #3ac
         border-radius 100%
         display inline-block

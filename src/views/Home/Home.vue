@@ -39,10 +39,10 @@
 </template>
 
 <script>
-import classic from "@/components/Home/classic";
-import expert from "@/components/Home/expert";
-import major from "@/components/Home/major";
-import recommend from "@/components/Home/recommend";
+import classic from "@/views/Home/classic";
+import expert from "@/views/Home/expert";
+import major from "@/views/Home/major";
+import recommend from "@/views/Home/recommend";
 import search from "@/components/search";
 export default {
   components: {

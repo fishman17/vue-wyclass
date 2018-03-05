@@ -49,7 +49,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
               "notFound"
             );
           }
-        }, 1000);    //假装加载了一下子（体现COM_LOADNG_STATE）
+        }, 1000);    //体现COM_LOADNG_STATE）
       });
 
 
@@ -92,18 +92,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json(appData.allclass)
       });
 
-      app.get('/api/goods', function (req, res) {
-        // res.json({
-        //   errno: 0,
-        //   data: goods
-        // })
-      });
-      app.get('/api/ratings', function (req, res) {
-        // res.json({
-        //   errno: 0,
-        //   data: ratings
-        // })
-      });
+
     },
     clientLogLevel: 'warning',
     historyApiFallback: {
