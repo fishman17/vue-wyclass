@@ -74,6 +74,7 @@ export default {
   overflow scroll
   .search
     position fixed
+    overflow hidden
   .mint-search
     height initial
   .left

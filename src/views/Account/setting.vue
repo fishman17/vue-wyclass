@@ -66,7 +66,7 @@ export default {
     }),
     signOut(){
       this.userOut();
-      this.$router.push('/account/login');
+      this.$router.push('/account');
     }
   }
 };

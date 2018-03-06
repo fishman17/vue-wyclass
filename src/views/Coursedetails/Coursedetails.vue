@@ -64,7 +64,13 @@ export default {
       this.$router.go("-1");
     },
     wantLearn() {
-      this.isWantLearn = !this.isWantLearn;
+      if (this.userData.name) {
+         this.isWantLearn = !this.isWantLearn;
+      }else{
+        MessageBox("提示", "请先登录");
+        this.$router.push('/account/login');
+      }
+
     },
     ...mapActions(["addUserClass"]),
     addUserCourse(course) {
@@ -77,6 +83,7 @@ export default {
           MessageBox("提示", "课程已经存在！");
         }
       }else{
+        MessageBox("提示", "请先登录");
         this.$router.push('/account/login');
       }
     },

@@ -812,6 +812,9 @@
             ]
         },
         {
+            "img": [
+                "http://img-ph-mirror.nosdn.127.net/089dQcALWeMNrzSEH-UY3g==/6631435002588315656.jpg?imageView&thumbnail=223y124&quality=100"
+            ],
             "title": "职业发展",
             "class": [
                 {
@@ -864,6 +867,10 @@
             ]
         },
         {
+            "img": [
+                "http://edu-image.nosdn.127.net/71a2a731-18af-4436-af50-78efed74a123.jpg?imageView&quality=100",
+                "http://edu-image.nosdn.127.net/7b80411c-136c-4aad-8c98-caa2d6ae73ff.jpg?imageView&quality=100"
+            ],
             "title": "编程开发",
             "class": [
                 {

@@ -7,16 +7,19 @@
       <div class="login">
           <div class="username">
               <label>账号:</label>
-              <input type="text" v-model="username" placeholder="账号或手机邮箱">
+              <input type="text" v-model="username" placeholder="测试账号admin">
           </div>
           <div class="password">
               <label>密码:</label>
-              <input v-model="password" type="password">
+              <input v-model="password" type="password" placeholder="测试密码123456">
           </div>
           <!-- <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
           <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field> -->
           <button @click="login">登录</button>
       </div>
+      <video src="http://v.youku.com/v_show/id_XMTk3Mzg4OTM2.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2" controls="controls">
+        您的浏览器不支持 video 标签。
+      </video>
    </div>
 </template>
 
@@ -45,7 +48,11 @@ export default {
 
     login() {
       if (!this.username || !this.password) {
-        alert("请填写完整");
+        Toast({
+                message: '请填写完整',
+                iconClass: 'icon icon-error',
+                position: 'top',
+        });
         return;
       }
       let data = {
