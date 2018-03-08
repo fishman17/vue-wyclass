@@ -105,19 +105,19 @@ export default {
     }
   },
   methods:{
-    changeToSetting(){
+    changeToSetting(){            //跳转到设置界面
       if(this.user.name){
         this.$router.push('/account/setting');
       }else{
         this.$router.push('/account/login');
       }
     },
-    changeToLogin(){
+    changeToLogin(){            //跳转到登录界面
       this.$router.push('/account/login');
     }
   },
   computed:{
-    ...mapGetters({
+    ...mapGetters({       
       user: 'getUserData'
     })
   }

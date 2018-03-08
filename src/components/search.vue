@@ -1,19 +1,24 @@
 <template>
       <div class="wrapper">
+        
         <div class="search">
+        
           <div class="searchbar">
             <i class="mintui mintui-search"></i>
+            <form action="" class="form">
             <input
             ref="input"
             @click="visible = true"
             type="search"
             v-model="currentValue"
             :placeholder="placeholder"
-            class="input"
+             class="input"
             @change="change">
+            </form>
           </div>
           <a class="back" @click="back" v-show="isSearching">取消</a>
         </div>
+
         <div class="content" v-if="isShowContent">
           <li class="result" v-for="item in result" :key="item.id">
             <mt-cell :title="item.title"  is-link  @click.native="changeToCourseDetail(item)">
@@ -52,7 +57,7 @@ export default {
     },
     change(event) {
       this.result = this.allClass.filter(item => {
-        if (item.title.indexOf(event.target.value) > 0) {
+        if (item.title.indexOf(event.target.value) >= 0) {
           return item;
         }
       });
@@ -93,12 +98,14 @@ export default {
       .mintui-search
         line-height 0.71111rem
         margin-left 0.28444rem
-      .input
-        background-color #f2f4f7
-        width 85%
-        height 0.83222rem
-        border 0
-        outline none
+      .form
+        display inline
+        .input
+          background-color #f2f4f7
+          width 85%
+          height 0.83222rem
+          border 0
+          outline none
     .back
       text-align center
       flex 1

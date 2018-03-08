@@ -23,7 +23,7 @@ router.beforeEach((to, from, next) => {
   //   next({ path: '/account/login' })
   // } else {
   //   next()
-  // }              //默认可选择不登录状态
+  // }                                   //默认可选择暂时不登录
   next()
 })
 

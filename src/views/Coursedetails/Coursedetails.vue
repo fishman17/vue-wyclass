@@ -4,7 +4,10 @@
         <span class="back" @click="back">&lt;</span>
         <span class="head">课程界面</span>
     </div>
-    <img :src="course.imgSrc" alt="" class="main-image">
+    <img :src="course.imgSrc" alt="" class="main-image" v-if="!userData.name || !userIsHave">
+    <video controls="controls" v-if="userData.name && userIsHave">
+      <source :src="course.mp4Src" type="video/mp4">     
+    </video>
     <mt-navbar v-model="selected">
         <mt-tab-item id="1">介绍</mt-tab-item>
         <mt-tab-item id="2">目录</mt-tab-item>
@@ -35,7 +38,7 @@
 </template>
 
 <script>
-import catalog from "@/views/Coursedetails/catalog";
+import catalog from "@/views/Coursedetails/catalog";              
 import comment from "@/views/Coursedetails/comment";
 import introduce from "@/views/Coursedetails/introduce";
 import { findCourseById } from "@/api/api";
@@ -57,23 +60,31 @@ export default {
   computed: {
     ...mapGetters({
       userData: "getUserData"
-    })
+    }),
+    userIsHave(){             //当前用户是否拥有此门课程的播放权限
+      for(let item of this.userData.nowLearnClass){
+        if(item.id == this.course.id){
+          return true;
+        }
+      }
+      return false;
+    }
   },
   methods: {
     back() {
       this.$router.go("-1");
+      console.log(111)
     },
-    wantLearn() {
+    wantLearn() {            //点亮红心操作
       if (this.userData.name) {
          this.isWantLearn = !this.isWantLearn;
       }else{
         MessageBox("提示", "请先登录");
         this.$router.push('/account/login');
       }
-
     },
-    ...mapActions(["addUserClass"]),
-    addUserCourse(course) {
+    ...mapActions(["addUserClass"]),   //通过vuex给用户添加课程
+    addUserCourse(course) {           //添加课程操作
       if (this.userData.name) {
         if (!this.checkIsExist(course)) {
           //如果我的课程尚未存在
@@ -96,9 +107,9 @@ export default {
   },
   mounted() {
     findCourseById({ id: this.$route.query.id }).then(res => {
-      // console.log(res+"ggg");
       this.course = res;
     });
+   
   }
 };
 </script>
@@ -114,6 +125,7 @@ export default {
     height 1.2rem
     background-color white
     line-height 1.2rem
+    z-index 2
     .back
       font-size 0.8rem
       margin-left 0.3rem
@@ -121,6 +133,10 @@ export default {
       font-size 0.6rem
       position absolute
       left 38%
+  video
+    margin-top 1.2rem
+    width 10rem
+    height 5.8rem
   .main-image
     margin-top 1.2rem
     width 10rem

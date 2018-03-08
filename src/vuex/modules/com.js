@@ -4,15 +4,11 @@ import * as types from '../types'
  * App通用配置
  */
 const state = {
-    loading: false,
+    loading: false,         //暂时只开发这一个 
     showToast: false,
     leftNavStatus: false,
     showSuccess: true,
 	showFail: false,
-    toastMsg: '操作成功',
-    showTimePicker: false,
-    alertMsg: '退出登录',
-    showAlert: false
 }
 const actions = {
     setLoadingState({ commit }, status) {

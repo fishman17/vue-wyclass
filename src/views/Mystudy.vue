@@ -72,7 +72,7 @@ export default {
       }
     },
     changeToDetail(classes){
-      this.$router.push({path:"/home/coursedetails" , query:{id:classes.id}})
+      this.$router.push({path:"/home/coursedetails" , query:{id:classes.id}})     //通过vue-router传参跳转
     },
     changeToLogin(){
       this.$router.push('/account/login');

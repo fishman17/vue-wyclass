@@ -41,7 +41,7 @@ export default {
     changeToSearch() {
       this.$router.push({ path: "home/search" });
     },
-    changeTitle(key) {
+    changeTitle(key) {         //改变css样式（当前点亮）
       let classes = this.classes;
       for (let item of classes) {
         item.isClick = false;

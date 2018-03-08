@@ -17,9 +17,6 @@
           <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field> -->
           <button @click="login">登录</button>
       </div>
-      <video src="http://v.youku.com/v_show/id_XMTk3Mzg4OTM2.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2" controls="controls">
-        您的浏览器不支持 video 标签。
-      </video>
    </div>
 </template>
 
@@ -46,7 +43,7 @@ export default {
     ),
     
 
-    login() {
+    login() {                  //登录操作
       if (!this.username || !this.password) {
         Toast({
                 message: '请填写完整',
@@ -59,7 +56,7 @@ export default {
         username: this.username,
         password: this.password
       };
-      this.$store.dispatch("setLoadingState", true);
+      this.$store.dispatch("setLoadingState", true); //设置loading状态
 
       requestLogin(data).then(res => {
         if(res == "notFound"){
@@ -67,7 +64,7 @@ export default {
                 message: '登陆失败',
                 iconClass: 'icon icon-error'
                 });
-            this.$store.dispatch("setLoadingState", false);
+            this.$store.dispatch("setLoadingState", false);    
         }else{
             this.setUserInfo(data);
             this.setUserData(res);
@@ -110,7 +107,6 @@ export default {
             height: 1.6667rem;
             line-height: 1.6667rem;
             color: #99a4bf;
-
             &>label {
                 font-size: 0.45rem;
             }
@@ -118,10 +114,10 @@ export default {
             &>input {
                 border: 0;
                 background-color: white;
-                width: 6.2rem;
+                width: 5.5rem;
                 height: 0.7rem;
                 outline: none;
-                font-size: 0.45rem;
+                font-size: 0.40rem;
             }
         }
 
@@ -139,5 +135,10 @@ export default {
             color: white;
         }
     }
+    video{
+      width 10rem
+      height 8rem 
+    }
+
 }
 </style>
