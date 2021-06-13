@@ -24,7 +24,7 @@
             <span class="learnnumber">{{course.learnNumber}}人学过</span>
             <span class="mainmessage">{{course.mainMessage}}</span>
           </div>
-          
+
         </li>
       </ul>
     </div>
@@ -66,12 +66,15 @@ export default {
       .mint-swipe-items-wrap
         height 4.2667rem
         .image
-          width 10rem
+          width 100vw
           height 4.2667rem
   .courses
     padding 0.3333rem
     margin-top 0.2rem
     background-color white
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
     &>ul
       padding 0
       margin-bottom 1rem
@@ -79,7 +82,7 @@ export default {
         display block
         font-size 0.3rem
         text-align center
-        position relative 
+        position relative
         color #81929a
         &:before
           content ''
@@ -126,7 +129,7 @@ export default {
           position relative
           .course-title
             display block
-            color black 
+            color black
             font-size 0.45rem
           .star
             display inline-block
@@ -135,11 +138,11 @@ export default {
           .mainmessage
             position absolute
             bottom 0.32rem
-            display block 
+            display block
             height 0.9111rem
             // white-space inherit
             // overflow hidden
-            // text-overflow ellipsis 
+            // text-overflow ellipsis
             text-overflow: -o-ellipsis-lastline
             overflow: hidden
             text-overflow: ellipsis

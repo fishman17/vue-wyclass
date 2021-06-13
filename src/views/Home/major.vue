@@ -34,17 +34,17 @@ export default {
   margin-bottom 1rem
   .majors
     box-sizing border-box
-    width 9.4rem
+    width 94vw
     background-color white
     padding 0.3rem
     margin-bottom 0.3rem
     &:active
       background-color #f2f4f7
-    img 
-      width 8.8rem
+    img
+      width 88vw
       height 5rem
     .title
-      // display block 
+      // display block
       font-size 0.5rem
     .message
       height 0.5rem
@@ -53,7 +53,7 @@ export default {
       display block
       white-space nowrap
       overflow hidden
-      text-overflow ellipsis 
+      text-overflow ellipsis
       // text-overflow: -o-ellipsis-lastline
       // overflow: hidden
       // text-overflow: ellipsis

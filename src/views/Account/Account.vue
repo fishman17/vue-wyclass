@@ -13,7 +13,7 @@
           <div class="button" @click="changeToLogin">登录</div>
         </div>
       </div>
-      
+
       <ul class="nav">
       <li class="nav-item">
         <mt-cell title="学习兴趣"   is-link>
@@ -63,9 +63,9 @@
          <mt-cell title="设置" icon="more" is-link>
            <i slot="icon" class="icon iconfont icon-shezhi" ></i>
            <mt-badge size="small" v-if="user.setting">{{user.setting.badge}}</mt-badge>
-          
+
          </mt-cell>
-        
+
       </li>
     </ul>
     <ul class="nav">
@@ -76,16 +76,16 @@
       </li>
       <li class="nav-item">
          <mt-cell title="给我们建议"   is-link>
-            <i slot="icon" class="icon iconfont icon-haoping" ></i> 
+            <i slot="icon" class="icon iconfont icon-haoping" ></i>
          </mt-cell>
       </li>
       <li class="nav-item">
          <mt-cell title="给我们建议"   is-link>
-            <i slot="icon" class="icon iconfont icon-haoping" ></i> 
+            <i slot="icon" class="icon iconfont icon-haoping" ></i>
          </mt-cell>
       </li>
     </ul>
-  
+
   </div>
 </template>
 
@@ -117,7 +117,7 @@ export default {
     }
   },
   computed:{
-    ...mapGetters({       
+    ...mapGetters({
       user: 'getUserData'
     })
   }
@@ -155,7 +155,7 @@ export default {
         font-size 0.34133rem
     .login
       height 4rem
-      width 10rem
+      width 100vw
       background-color white
       text-align center
       display: flex;
@@ -182,17 +182,17 @@ export default {
     list-style-type none
     .nav-item
       .mint-cell
-        background-position initial 
+        background-position initial
         .mint-cell-wrapper
           .mint-cell-title
             color red
-            .icon 
-              vertical-align: text-top 
+            .icon
+              vertical-align: text-top
               font-size 23px
               color #99a4bf
             .mint-cell-text
               color red
               display block
-              vertical-align: text-top 
+              vertical-align: text-top
 
 </style>

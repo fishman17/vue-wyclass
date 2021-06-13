@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-const appData = require('../data.json')
+const appData = require('../static/data.json')
 const userList = appData.userList
 
 
@@ -27,73 +27,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
-    before(app) {
-      app.use(bodyParser.json()); // for parsing application/json
-      app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-      app.post('/api/login', (req, res) =>{
-        let userData = req.body;
-        let isExist = false;
-        // console.log(user);
-        setTimeout(() => {
-          userList.map((user) =>{
-            if(user.username == userData.username && user.password == userData.password){
-              res.json({
-                ...user
-              });
-              isExist = true;
-              return;
-            }
-          })
-          if(!isExist){
-            res.json(
-              "notFound"
-            );
-          }
-        }, 1000);    //体现COM_LOADNG_STATE）
-      });
-
-
-      app.post('/api/findcoursebyid', function (req, res) {
-        for(let index in appData.allclass){
-          if(appData.allclass[index].id == req.body.id ){
-            res.json(appData.allclass[index]);
-            return;
-          }
-        }
-      });
-
-
-      app.get('/api/getrecommend', function (req, res) {
-        res.json(appData.home[0])
-      });
-
-
-      app.get('/api/getclassic', function (req, res) {
-        res.json(appData.home[1])
-      });
-
-
-      app.get('/api/getmajor', function (req, res) {
-        res.json(appData.home[2])
-      });
-
-
-      app.get('/api/getexpert', function (req, res) {
-        res.json(appData.home[3])
-      });
-
-
-      app.get('/api/getclassify', function (req, res) {
-        res.json(appData.classes)
-      });
-
-
-      app.get('/api/getallclass', function (req, res) {
-        res.json(appData.allclass)
-      });
-
-
-    },
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
