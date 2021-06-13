@@ -26,7 +26,6 @@ router.beforeEach((to, from, next) => {
   // }                                   //默认可选择暂时不登录
   next()
 })
-
 new Vue({
   el: '#app',
   router,

@@ -50,7 +50,7 @@ export default {
         user: 'getUserData'
     }),
     // classList(){
-      
+
     // }
   },
   mounted(){
@@ -60,7 +60,7 @@ export default {
       this.checkList(this.user.nowLearnClass[index]);
       }
     });
-    
+
   },
   methods:{
     checkList(item){    //通过user中的所学课程id从所有课程中寻找详细课程信息
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.wrapper 
+.wrapper
   background-color: #f2f4f7;
   width: 100%;
   height: 92%;
@@ -92,10 +92,10 @@ export default {
     // height 7rem
     background-color: white;
     padding: .42667rem;
-    .nav 
+    .nav
       margin-top: 8px;
       margin-bottom: 0;
-    .avatar 
+    .avatar
       width: 1.70667rem;
       height: 1.70667rem;
       border-radius: 1.70667rem;
@@ -103,22 +103,22 @@ export default {
       display: inline-block;
       margin-left: .21333rem;
       margin-top: 0.21333rem;
-    .description 
+    .description
       display: inline-block;
       vertical-align: top;
       margin-left: 0.21333rem;
-      .title 
+      .title
         font-size: .64rem;
         font-weight: 600;
         margin-top: .42667rem;
         margin-bottom: 0;
-      .target 
+      .target
         display: inline-block;
         margin-top: 0.21333rem;
         font-size: 0.34133rem;
   .login
     height 4rem
-    width 10rem
+    width 100vw
     background-color white
     text-align center
     display: flex;
@@ -140,14 +140,14 @@ export default {
         font-size 0.5rem
         &:active
           background-color #f2f4f7
-  .manage 
+  .manage
     background-color white
     display: flex;
     // border-bottom: .042667rem solid #ced1da;
     height 0.9rem
     line-height 0.5rem
     // height 1rem
-    &>span 
+    &>span
       margin-top: 0.21333rem;
       flex: 1;
       text-align: center;
@@ -155,20 +155,20 @@ export default {
       margin-bottom 0.1rem
       &:active
         background-color #f2f4f7
-      &:last-child 
+      &:last-child
         border-right: 0;
-  .nowlearn 
+  .nowlearn
     margin-top: .21333rem;
     padding: .41333rem;
     min-height: 100%;
     background-color: white;
-   
-    .head 
-      .title 
+
+    .head
+      .title
         // display inline-block
         font-weight: 500
         font-size 0.512rem;
-      .seeall 
+      .seeall
         position: relative;
         float: right;
         font-size: 0.37133rem;
@@ -177,7 +177,7 @@ export default {
         color #c8c8cd;
         &:active
           background-color #f2f4f7
-        &:after 
+        &:after
           border: solid 2px #c8c8cd;
           border-bottom-width: 0;
           border-left-width: 0;
@@ -190,12 +190,12 @@ export default {
           -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
     .allclass
-      list-style-type none 
+      list-style-type none
       margin 0
       margin-top .42667rem
       padding 0
       .class
-        display block 
+        display block
         height 2.84444rem
         border-bottom 1px solid #c8c8cd
         &:active
@@ -204,17 +204,17 @@ export default {
           width 5.97332rem
           display inline-block
           .title
-            display block 
+            display block
             height 0.8532rem
             margin-top 0.21333rem
             font-size 0.512rem;
           .progress
-            display block 
+            display block
             margin-top  0.56887rem
             font-size 0.36974rem;
             color #29b774
         .class-img
-          float right 
+          float right
           display inline-block
           width 2.98662rem
           height 2rem

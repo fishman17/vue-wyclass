@@ -6,7 +6,7 @@
     </div>
     <img :src="course.imgSrc" alt="" class="main-image" v-if="!userData.name || !userIsHave">
     <video controls="controls" v-if="userData.name && userIsHave">
-      <source :src="course.mp4Src" type="video/mp4">     
+      <source :src="course.mp4Src" type="video/mp4">
     </video>
     <mt-navbar v-model="selected">
         <mt-tab-item id="1">介绍</mt-tab-item>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import catalog from "@/views/Coursedetails/catalog";              
+import catalog from "@/views/Coursedetails/catalog";
 import comment from "@/views/Coursedetails/comment";
 import introduce from "@/views/Coursedetails/introduce";
 import { findCourseById } from "@/api/api";
@@ -73,7 +73,6 @@ export default {
   methods: {
     back() {
       this.$router.go("-1");
-      console.log(111)
     },
     wantLearn() {            //点亮红心操作
       if (this.userData.name) {
@@ -109,7 +108,7 @@ export default {
     findCourseById({ id: this.$route.query.id }).then(res => {
       this.course = res;
     });
-   
+
   }
 };
 </script>
@@ -135,11 +134,11 @@ export default {
       left 38%
   video
     margin-top 1.2rem
-    width 10rem
+    width 100vw
     height 5.8rem
   .main-image
     margin-top 1.2rem
-    width 10rem
+    width 100vw
     height 5.5rem
   .fixed
     position fixed

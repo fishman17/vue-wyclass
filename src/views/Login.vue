@@ -41,7 +41,7 @@ export default {
         'setUserData','setUserInfo'
       ]
     ),
-    
+
 
     login() {                  //登录操作
       if (!this.username || !this.password) {
@@ -64,8 +64,9 @@ export default {
                 message: '登陆失败',
                 iconClass: 'icon icon-error'
                 });
-            this.$store.dispatch("setLoadingState", false);    
+            this.$store.dispatch("setLoadingState", false);
         }else{
+
             this.setUserInfo(data);
             this.setUserData(res);
             this.$router.replace("/home");
@@ -136,8 +137,8 @@ export default {
         }
     }
     video{
-      width 10rem
-      height 8rem 
+      width 100vw
+      height 8rem
     }
 
 }

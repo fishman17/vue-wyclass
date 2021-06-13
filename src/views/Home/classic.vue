@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in classic.swiperCourse" :key="item.id" class="item" > 
+      <mt-swipe-item v-for="item in classic.swiperCourse" :key="item.id" class="item" >
         <img :src="item.imgSrc" alt="" class="image" @click="changeToCoursedetails(item)">
       </mt-swipe-item>
     </mt-swipe>
@@ -61,9 +61,12 @@ export default {
       .mint-swipe-items-wrap
         height 4.2667rem
         .image
-          width 10rem
+          width 100vw
           height 4.2667rem
   .courses
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
     .recommend
       margin 0
       padding 0
@@ -83,7 +86,7 @@ export default {
         vertical-align: middle
         &:active
           background-color #f2f4f7
-        &>img 
+        &>img
           width 4.224rem
           height 2.56rem
         // .title
@@ -96,7 +99,7 @@ export default {
           .learnnumber
             font-size 0.29867rem
             color #a6abb3
-          .newprice 
+          .newprice
             font-size 0.46933rem
             color #ff4400
           .oldprice
@@ -112,5 +115,5 @@ export default {
               width 1.2667rem
               height 0.04267rem
               background-color #a6abb3
-      
+
 </style>

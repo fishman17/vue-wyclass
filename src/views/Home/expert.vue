@@ -34,16 +34,16 @@ export default {
 .wrapper
   margin-bottom 2rem
   .title
-    text-align left 
+    text-align left
     font-weight bolder
     font-size 0.4rem
     margin-left 0.5rem
   .expert
-    width 10rem
+    width 100vw
     border-bottom 1px solid #e6eaf2
     &:active
       background-color #f2f4f7
-    img 
+    img
       width 2rem
       height 2rem
       border-radius 50%
@@ -54,7 +54,7 @@ export default {
       display inline-block
       margin 0.3rem
       font-size 0.4rem
-      .name 
+      .name
         display block
         margin-bottom 0.2rem
       .describe
@@ -68,10 +68,10 @@ export default {
       margin 0.3rem
       text-align left
       color #8b8f97
-      span 
+      span
         color black
         white-space nowrap
         overflow hidden
-        text-overflow ellipsis 
+        text-overflow ellipsis
 </style>
 

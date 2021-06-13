@@ -13,5 +13,5 @@ export default {
 <style lang="stylus" scoped>
 .wrapper
   height 10rem
-  width 10rem
+  width 100vw
 </style>

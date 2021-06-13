@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <h1>暂未开发</h1>
-    
+
   </div>
 </template>
 
@@ -14,5 +14,5 @@ export default {
 <style lang="stylus" scoped>
 .wrapper
   height 10rem
-  width 10rem
+  width 100vw
 </style>
